@@ -1,7 +1,7 @@
-var dotenv = require("dotenv");
-dotenv.config();
+var dotenv = require("dotenv")
+dotenv.config()
 
-const { spaceId, accessToken, snipcart } = process.env;
+const { spaceId, accessToken, snipcart } = process.env
 
 module.exports = {
   siteMetadata: {
@@ -36,9 +36,9 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        spaceId,
-        accessToken
-      }
+        spaceId: spaceId,
+        accessToken: accessToken,
+      },
     },
     {
       resolve: "gatsby-plugin-snipcartv3",
