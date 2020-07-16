@@ -1,11 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "../css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.css"
+
 import "../css/style.css"
 import SEO from "../components/seo"
-import logo from "../images/oneshopper-logo.png"
 
 const Header = ({ siteTitle }) => {
   return (
@@ -14,38 +15,74 @@ const Header = ({ siteTitle }) => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-4 align-self-center">
-            <Link className="header-logo" to="/">
+            <AniLink
+              className="header-logo"
+              cover
+              bg="black"
+              duration={1}
+              to="/"
+            >
               {/* <img src={logo} alt="logo"></img> */}
               <h1>Citria</h1>
-            </Link>
+            </AniLink>
           </div>
           <div className="col-sm-12 col-md-8 align-self-center">
             <nav>
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">
+                  <AniLink
+                    className="nav-link"
+                    cover
+                    bg="black"
+                    duration={1}
+                    to="/"
+                  >
                     Home
-                  </Link>
+                  </AniLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/blogs">
+                  <AniLink
+                    className="nav-link"
+                    cover
+                    bg="black"
+                    duration={1}
+                    to="/blogs"
+                  >
                     Blogs
-                  </Link>
+                  </AniLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/store">
+                  <AniLink
+                    className="nav-link"
+                    cover
+                    bg="black"
+                    duration={1}
+                    to="/store"
+                  >
                     Store
-                  </Link>
+                  </AniLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
+                  <AniLink
+                    className="nav-link"
+                    cover
+                    bg="black"
+                    duration={1}
+                    to="/about"
+                  >
                     About
-                  </Link>
+                  </AniLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/contact-us">
+                  <AniLink
+                    className="nav-link"
+                    cover
+                    bg="black"
+                    duration={1}
+                    to="/contact-us"
+                  >
                     Contact
-                  </Link>
+                  </AniLink>
                 </li>
               </ul>
               <div className="header-cart">
