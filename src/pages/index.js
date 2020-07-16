@@ -77,14 +77,14 @@ const IndexPage = data => (
       keywords={[`gatsby`, `oneshopper`, `react`, `Ecommerce`]}
     />
     <Banner BannerData={data.data.allContentfulHeaderBanner.edges} />
-    <LatestBlogs data={data.data.allContentfulBlogs} />
+    {/* <LatestBlogs data={data.data.allContentfulBlogs} />
     <div className="container">
       <div className="text-center">
         <h2 className="with-underline">Latest Items</h2>
       </div>
       <IndexPost data={data}></IndexPost>
     </div>
-    <Countdown data={data.data.contentfulDealCountDown} />
+    <Countdown data={data.data.contentfulDealCountDown} /> */}
   </Layout>
 )
 

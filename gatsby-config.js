@@ -47,5 +47,8 @@ module.exports = {
         autopop: true,
       },
     },
+    {
+      resolve: "gatsby-plugin-transition-link",
+    },
   ],
 }
