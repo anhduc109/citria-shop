@@ -658,16 +658,16 @@ pre tt:after {
   text-decoration: none !important;
   text-transform: uppercase;
 }
-.product-details {
-}
+
 .product-details .gatsby-image-wrapper {
   height: 500px;
 }
 
 /* header css */
 header.site-header {
+  position: absolute;
   width: 100%;
-  background: #333333;
+  background: transparent;
   z-index: 9;
   padding: 20px 0;
 }
@@ -861,6 +861,7 @@ span.price {
   margin-bottom: 30px;
 }
 .site-Banner {
+  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -897,7 +898,7 @@ span.price {
   right: 0;
   width: 100%;
   z-index: 1;
-  height: calc(100% - 10px);
+  height: 100%;
 }
 .site-Banner .Banner-details .sub-title {
   color: #fff;
@@ -1129,7 +1130,7 @@ ul.latest-blog li .inner a {
   z-index: 5;
 }
 .site-Banner .gatsby-image-wrapper {
-  height: 500px;
+  height: 100vh;
 }
 .Contact-us {
   margin: 40px 0;
