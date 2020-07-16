@@ -1381,7 +1381,7 @@ footer.site-footer ul {
     font-size: 14px;
   }
   .site-Banner .gatsby-image-wrapper {
-    height: 350px;
+    height: 100vh;
   }
   .product-main .details_List .details_inner h2 {
     font-size: 20px;
