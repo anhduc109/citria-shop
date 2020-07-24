@@ -5,36 +5,47 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import MobileHeader from "./mobile-header"
 import Footer from "./footer"
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ children }) => {
+  const [isMobileSize, setIsMobileSize] = useState(false)
+  useEffect(() => {
+    setIsMobileSize(window.innerWidth < 768)
+  }, [isMobileSize])
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <main>{children}</main>
-        </div>
-        <Footer />
-      </>
-    )}
-  />
-)
-
+      `}
+      render={data => (
+        <>
+          {!isMobileSize ? (
+            <Header siteTitle={data.site.siteMetadata.title} />
+          ) : (
+            <MobileHeader />
+          )}
+          <div>
+            <main>{children}</main>
+          </div>
+          <Footer />
+        </>
+      )}
+    />
+  )
+}
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
