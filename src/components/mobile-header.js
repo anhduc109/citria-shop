@@ -1,4 +1,5 @@
 import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { stack as Menu } from "react-burger-menu"
 
 export default class MobileHeader extends React.Component {
@@ -9,18 +10,36 @@ export default class MobileHeader extends React.Component {
   render() {
     return (
       <Menu>
-        <a id="home" className="menu-item" href="/">
+        <AniLink className="menu-item" cover bg="black" duration={1} to="/">
           Home
-        </a>
-        <a id="about" className="menu-item" href="/about">
+        </AniLink>
+        <AniLink
+          className="menu-item"
+          cover
+          bg="black"
+          duration={1}
+          to="/store"
+        >
+          Store
+        </AniLink>
+        <AniLink
+          className="menu-item"
+          cover
+          bg="black"
+          duration={1}
+          to="/about"
+        >
           About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
+        </AniLink>
+        <AniLink
+          className="menu-item"
+          cover
+          bg="black"
+          duration={1}
+          to="/contact"
+        >
           Contact
-        </a>
-        <a onClick={this.showSettings} className="menu-item--small" href="">
-          Settings
-        </a>
+        </AniLink>
       </Menu>
     )
   }

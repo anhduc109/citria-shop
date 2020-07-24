@@ -15,9 +15,14 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const [isMobileSize, setIsMobileSize] = useState(false)
+
   useEffect(() => {
-    setIsMobileSize(window.innerWidth < 768)
-  }, [isMobileSize])
+    const handleResize = () => {
+      setIsMobileSize(window.innerWidth < 768)
+    }
+    handleResize()
+    window.addEventListener("resize", handleResize)
+  }, [])
 
   return (
     <StaticQuery
