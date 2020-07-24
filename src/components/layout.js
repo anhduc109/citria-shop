@@ -37,11 +37,7 @@ const Layout = ({ children }) => {
       `}
       render={data => (
         <>
-          {!isMobileSize ? (
-            <Header siteTitle={data.site.siteMetadata.title} />
-          ) : (
-            <MobileHeader />
-          )}
+          {!isMobileSize ? <Header /> : <MobileHeader />}
           <div>
             <main>{children}</main>
           </div>

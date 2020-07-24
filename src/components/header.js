@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { useLocation } from "@reach/router"
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "../css/font-awesome.css"
@@ -8,9 +9,11 @@ import "bootstrap/dist/css/bootstrap.css"
 import "../css/style.css"
 import SEO from "../components/seo"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
+  const { pathname } = useLocation()
+
   return (
-    <header className="site-header">
+    <header className={pathname === "/" ? "site-header-home" : "site-header"}>
       <SEO></SEO>
       <div className="container">
         <div className="row">

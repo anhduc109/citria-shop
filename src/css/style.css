@@ -664,13 +664,21 @@ pre tt:after {
 }
 
 /* header css */
-header.site-header {
+header.site-header-home {
   position: absolute;
   width: 100%;
   background: transparent;
   z-index: 9;
   padding: 20px 0;
 }
+
+header.site-header {
+  width: 100%;
+  background: black;
+  z-index: 9;
+  padding: 20px 0;
+}
+
 ul.navbar-nav.mr-auto li {
   margin-bottom: 0;
 }
