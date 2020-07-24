@@ -32,7 +32,7 @@ const MobileHeader = () => {
           cover
           bg="black"
           duration={1}
-          to="/contact"
+          to="/contact-us"
         >
           <h3>Contact</h3>
         </AniLink>
