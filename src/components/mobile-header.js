@@ -9,38 +9,40 @@ export default class MobileHeader extends React.Component {
 
   render() {
     return (
-      <Menu>
-        <AniLink className="menu-item" cover bg="black" duration={1} to="/">
-          Home
-        </AniLink>
-        <AniLink
-          className="menu-item"
-          cover
-          bg="black"
-          duration={1}
-          to="/store"
-        >
-          Store
-        </AniLink>
-        <AniLink
-          className="menu-item"
-          cover
-          bg="black"
-          duration={1}
-          to="/about"
-        >
-          About
-        </AniLink>
-        <AniLink
-          className="menu-item"
-          cover
-          bg="black"
-          duration={1}
-          to="/contact"
-        >
-          Contact
-        </AniLink>
-      </Menu>
+      <div>
+        <Menu>
+          <AniLink className="menu-item" cover bg="black" duration={1} to="/">
+            <h3>Home</h3>
+          </AniLink>
+          <AniLink
+            className="menu-item"
+            cover
+            bg="black"
+            duration={1}
+            to="/store"
+          >
+            <h3>Store</h3>
+          </AniLink>
+          <AniLink
+            className="menu-item"
+            cover
+            bg="black"
+            duration={1}
+            to="/about"
+          >
+            <h3>About</h3>
+          </AniLink>
+          <AniLink
+            className="menu-item"
+            cover
+            bg="black"
+            duration={1}
+            to="/contact"
+          >
+            <h3>Contact</h3>
+          </AniLink>
+        </Menu>
+      </div>
     )
   }
 }

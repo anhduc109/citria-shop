@@ -1440,18 +1440,18 @@ code {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #111111;
 }
 
 /* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
+/* .bm-burger-bars-hover {
   background: #a90000;
-}
+} */
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 50px;
+  width: 50px;
 }
 
 /* Color/shape of close button cross */
@@ -1470,7 +1470,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #26262b;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -1494,4 +1494,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  color: white;
+}
+
+.menu-item:hover {
+  color: white;
+  text-decoration: none;
 }
