@@ -14,12 +14,13 @@ import MobileHeader from "./mobile-header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  const [isMobileSize, setIsMobileSize] = useState(window.innerWidth < 768)
+  const [isMobileSize, setIsMobileSize] = useState()
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobileSize(window.innerWidth < 768)
     }
+    handleResize()
     window.addEventListener("resize", handleResize)
   }, [])
 
