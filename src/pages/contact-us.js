@@ -10,7 +10,7 @@ class Contact extends React.Component {
         <div className="Contact-us">
           <div className="container">
             {/* To make form work, use your own formspree credentials in action="" */}
-            <form netlify method="POST" name="contact">
+            <form data-netlify="true" method="POST" name="contact">
               <div>
                 <label>
                   Your name
