@@ -45,7 +45,7 @@ class IndexPost extends React.Component {
             .slice(0, NoOfPost)
             .map(items => (
               <div
-                className="Catalogue__item col-sm-12 col-md-6 col-lg-4"
+                className="Catalogue__item col-sm-12 col-md-4 col-lg-3"
                 key={items.node.id}
               >
                 <div className="details_List">
@@ -62,7 +62,6 @@ class IndexPost extends React.Component {
                         name={items.node.name}
                       />
                     </h2>
-                    <p>{items.node.details.childMarkdownRemark.excerpt}</p>
                     <div className="row">
                       <div className="col-sm-12 align-self-center">
                         <span className="price">${items.node.price}</span>
@@ -99,7 +98,7 @@ export const query = graphql`
           slug
           rating
           image {
-            fixed(width: 1000, height: 500) {
+            fixed(width: 500, height: 1000) {
               width
               height
               src

@@ -615,24 +615,15 @@ pre tt:after {
   font-family: "Josefin Sans", sans-serif;
 }
 .product-main .details_List .gatsby-image-wrapper {
-  height: 200px;
+  height: 300px;
 }
 .img {
   outline: none;
 }
 .product-main .details_List {
   margin: 0 0 30px 0;
-  -webkit-box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.25);
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  -o-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
-  border: 1px solid #cccccc73;
 }
-.product-main .details_List:hover {
-  -webkit-box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.5);
-}
+
 .product-main .details_List .details_inner {
   padding: 20px;
   position: relative;
