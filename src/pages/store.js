@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import StarRatingComponent from "react-star-rating-component"
 import { graphql } from "gatsby"
+
+import AnimateLink from "../components/AnimateLink"
 
 class IndexPost extends React.Component {
   constructor(props) {
@@ -57,7 +57,10 @@ class IndexPost extends React.Component {
 
                   <div className="details_inner">
                     <h2>
-                      <Link to={`/${items.node.slug}`}>{items.node.name}</Link>
+                      <AnimateLink
+                        path={`/${items.node.slug}`}
+                        name={items.node.name}
+                      />
                     </h2>
                     <p>{items.node.details.childMarkdownRemark.excerpt}</p>
                     <div className="row">
