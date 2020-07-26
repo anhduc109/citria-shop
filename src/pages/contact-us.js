@@ -9,7 +9,6 @@ class Contact extends React.Component {
         <SEO title="Contact Us" keywords={[`gatsby`, `Contact Us`, `react`]} />
         <div className="Contact-us">
           <div className="container">
-            {/* To make form work, use your own formspree credentials in action="" */}
             <form name="contact" data-netlify="true" method="POST">
               <input type="hidden" name="form-name" value="contact" />
               <label>

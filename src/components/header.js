@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className={pathname === "/" ? "site-header-home" : "site-header"}>
-      <SEO></SEO>
+      {/* <SEO></SEO> */}
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-4 align-self-center">
