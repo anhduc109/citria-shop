@@ -1518,10 +1518,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .image-gallery-thumbnail.active {
   border-color: black !important;
+  border-width: 3px !important;
 }
 
 .image-gallery-thumbnail:hover {
   border-color: black !important;
+  border-width: 3px !important;
 }
 
 /* Responsive */

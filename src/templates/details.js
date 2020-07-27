@@ -125,7 +125,7 @@ export const query = graphql`
       slug
       image {
         id
-        fixed(width: 1120, height: 600) {
+        fixed(width: 1200, height: 1200) {
           width
           height
           src
@@ -140,7 +140,7 @@ export const query = graphql`
       }
       productMorePhotos {
         id
-        fixed(width: 1120, height: 600) {
+        fixed(width: 1200, height: 1200) {
           src
         }
       }
