@@ -21,6 +21,7 @@ const ProductDetails = data => {
       images.push(imageObject)
     })
     setImagesGallery(images)
+    console.log("vao")
   }, [
     data.data.contentfulProduct.image.fixed.src,
     data.data.contentfulProduct.productMorePhotos,
@@ -33,41 +34,29 @@ const ProductDetails = data => {
         keywords={[`gatsby`, `application`, `react`]}
       />
       <div className="container details-page">
-        <div className="product-details">
-          <ImageGallery
-            items={imagesGallery}
-            thumbnailPosition="left"
-            showPlayButton={false}
-          />
-          <br />
-          <div>
-            <h3>{data.data.contentfulProduct.name}</h3>
+        <div className="row product-details">
+          <div className="product-gallery col-sm-12 col-md-8">
+            <ImageGallery
+              items={imagesGallery}
+              thumbnailPosition="left"
+              showPlayButton={false}
+            />
           </div>
-          <div className="row buynowinner">
-            <span className="price">${data.data.contentfulProduct.price}</span>
-            <a
-              href="#"
-              className="Product snipcart-add-item"
-              data-item-id={data.data.contentfulProduct.slug}
-              data-item-price={data.data.contentfulProduct.price}
-              data-item-image={
-                data.data.contentfulProduct.image === null
-                  ? ""
-                  : data.data.contentfulProduct.image.fixed.src
-              }
-              data-item-name={data.data.contentfulProduct.name}
-              data-item-url={`/`}
-            >
-              <i className="fas fa-tags" />
-              Buy Now
-            </a>
+          <div className="product-description col-sm-12 col-md-4">
+            <h1 className="product-title">
+              {data.data.contentfulProduct.name}
+            </h1>
+            <h1 className="product-price">
+              ${data.data.contentfulProduct.price}
+            </h1>
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  data.data.contentfulProduct.details.childMarkdownRemark.html,
+              }}
+            />
+            <button className="add-to-cart-btn">Add to cart</button>
           </div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                data.data.contentfulProduct.details.childMarkdownRemark.html,
-            }}
-          />
         </div>
       </div>
     </Layout>
