@@ -52,7 +52,7 @@ class IndexPost extends React.Component {
                   {items.node.image === null ? (
                     <div className="no-image">No Image</div>
                   ) : (
-                    <Img sizes={items.node.image.fixed} />
+                    <Img sizes={items.node.image.fixed} objectFit="cover" />
                   )}
 
                   <div className="details_inner">
@@ -98,7 +98,7 @@ export const query = graphql`
           slug
           rating
           image {
-            fixed(width: 500, height: 1000) {
+            fixed(width: 1200, height: 1200) {
               width
               height
               src
