@@ -1425,17 +1425,31 @@ code {
 
 /* mobile header */
 /* Position and sizing of burger button */
+.mobile-header {
+  z-index: 10;
+  background-color: #26262b;
+  height: 60px;
+  width: 100%;
+}
+
+.citria-logo {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 9px;
+}
+
 .bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
+  position: absolute;
+  width: 26px;
+  height: 20px;
+  left: 25px;
+  top: 20px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #111111;
+  background: white;
 }
 
 /* Color/shape of burger icon bars on hover*/

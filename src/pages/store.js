@@ -52,7 +52,7 @@ class IndexPost extends React.Component {
                   {items.node.image === null ? (
                     <div className="no-image">No Image</div>
                   ) : (
-                    <Img sizes={items.node.image.fixed} objectFit="cover" />
+                    <Img sizes={items.node.image.fixed} />
                   )}
 
                   <div className="details_inner">

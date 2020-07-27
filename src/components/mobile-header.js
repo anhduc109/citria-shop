@@ -4,7 +4,7 @@ import { stack as Menu } from "react-burger-menu"
 
 const MobileHeader = () => {
   return (
-    <div>
+    <div className="mobile-header">
       <Menu>
         <AniLink className="menu-item" cover bg="black" duration={1} to="/">
           <h3>Home</h3>
@@ -37,6 +37,7 @@ const MobileHeader = () => {
           <h3>Contact</h3>
         </AniLink>
       </Menu>
+      <div className="citria-logo">Citria</div>
     </div>
   )
 }
