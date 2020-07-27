@@ -39,69 +39,28 @@ const ProductDetails = data => {
             thumbnailPosition="left"
             showPlayButton={false}
           />
-          {/* <div className="Product-Screenshot">
-            {data.data.contentfulProduct.productMorePhotos === null ? (
-              <div className="no-image">No Image</div>
-            ) : (
-              <Tabs>
-                <TabPanel>
-                  <Tab>
-                    <img
-                      src={data.data.contentfulProduct.image.fixed.src}
-                      alt={data.data.contentfulProduct.image.id}
-                    />
-                  </Tab>
-                </TabPanel>
-                {data.data.contentfulProduct.productMorePhotos.map(items => (
-                  <TabPanel key={items.id}>
-                    <Tab>
-                      <img src={items.fixed.src} alt={items.id} />
-                    </Tab>
-                  </TabPanel>
-                ))}
-                <TabList>
-                  <Tab>
-                    <img
-                      src={data.data.contentfulProduct.image.fixed.src}
-                      alt={data.data.contentfulProduct.image.id}
-                    />
-                  </Tab>
-                  {data.data.contentfulProduct.productMorePhotos.map(items => (
-                    <Tab key={items.id}>
-                      <img src={items.fixed.src} alt={items.id} />
-                    </Tab>
-                  ))}
-                </TabList>
-              </Tabs>
-            )}
-          </div> */}
+          <br />
           <div>
-            <h2>{data.data.contentfulProduct.name}</h2>
+            <h3>{data.data.contentfulProduct.name}</h3>
           </div>
           <div className="row buynowinner">
-            <div className="col-sm-2">
-              <span className="price">
-                Price: ${data.data.contentfulProduct.price}
-              </span>
-            </div>
-            <div className="col-sm-10 text-left">
-              <a
-                href="#"
-                className="Product snipcart-add-item"
-                data-item-id={data.data.contentfulProduct.slug}
-                data-item-price={data.data.contentfulProduct.price}
-                data-item-image={
-                  data.data.contentfulProduct.image === null
-                    ? ""
-                    : data.data.contentfulProduct.image.fixed.src
-                }
-                data-item-name={data.data.contentfulProduct.name}
-                data-item-url={`/`}
-              >
-                <i className="fas fa-tags" />
-                Buy Now
-              </a>
-            </div>
+            <span className="price">${data.data.contentfulProduct.price}</span>
+            <a
+              href="#"
+              className="Product snipcart-add-item"
+              data-item-id={data.data.contentfulProduct.slug}
+              data-item-price={data.data.contentfulProduct.price}
+              data-item-image={
+                data.data.contentfulProduct.image === null
+                  ? ""
+                  : data.data.contentfulProduct.image.fixed.src
+              }
+              data-item-name={data.data.contentfulProduct.name}
+              data-item-url={`/`}
+            >
+              <i className="fas fa-tags" />
+              Buy Now
+            </a>
           </div>
           <div
             dangerouslySetInnerHTML={{
