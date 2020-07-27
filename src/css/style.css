@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700,700i&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 html {
   font-family: "Josefin Sans", sans-serif;
@@ -604,11 +605,6 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
 }
 
 * {
@@ -1502,4 +1498,45 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .menu-item:hover {
   color: white;
   text-decoration: none;
+}
+
+/* Image Gallery */
+.image-gallery-right-nav .image-gallery-svg {
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.image-gallery-left-nav .image-gallery-svg {
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.image-gallery-icon:hover {
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.image-gallery-thumbnail.active {
+  border-color: black !important;
+}
+
+.image-gallery-thumbnail:hover {
+  border-color: black !important;
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+
+  .image-gallery-right-nav .image-gallery-svg {
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  .image-gallery-left-nav .image-gallery-svg {
+    height: 30px !important;
+    width: 30px !important;
+  }
 }
