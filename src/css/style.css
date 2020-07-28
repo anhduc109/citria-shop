@@ -912,10 +912,10 @@ span.price {
   max-width: 70%;
 }
 .store-page .product-main {
-  margin-top: 30px;
+  margin-top: 150px;
 }
 .details-page .product-details {
-  margin-top: 30px;
+  margin-top: 150px;
 }
 .with-underline {
   position: relative;
@@ -1272,9 +1272,6 @@ a.header-logo img {
 .site-footer ul {
   margin-bottom: 0;
 }
-.site-About {
-  padding: 40px 0;
-}
 footer.site-footer ul {
   margin: 0;
 }
@@ -1550,6 +1547,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: white;
   border: none;
   padding: 9px 20px;
+}
+
+/* About Page */
+.about-page {
+  margin-top: 150px;
 }
 
 /* Responsive */
