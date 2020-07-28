@@ -18,6 +18,8 @@ const Layout = ({ children }) => {
     typeof window !== "undefined" ? window.innerWidth < 768 : true
   )
 
+  console.log("size", isMobileSize)
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobileSize(window.innerWidth < 768)
