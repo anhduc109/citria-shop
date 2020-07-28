@@ -18,7 +18,7 @@ const ProductDetails = data => {
         original: item.fixed.src,
         thumbnail: item.fixed.src,
       }
-      images.push(imageObject)
+      return images.push(imageObject)
     })
     setImagesGallery(images)
   }, [
