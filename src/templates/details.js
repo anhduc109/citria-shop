@@ -21,7 +21,6 @@ const ProductDetails = data => {
       images.push(imageObject)
     })
     setImagesGallery(images)
-    console.log("vao")
   }, [
     data.data.contentfulProduct.image.fixed.src,
     data.data.contentfulProduct.productMorePhotos,
@@ -47,7 +46,7 @@ const ProductDetails = data => {
               {data.data.contentfulProduct.name}
             </h1>
             <h1 className="product-price">
-              ${data.data.contentfulProduct.price}
+              {data.data.contentfulProduct.price} VNĐ
             </h1>
             <div
               dangerouslySetInnerHTML={{
