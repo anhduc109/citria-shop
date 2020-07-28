@@ -15,7 +15,7 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const [isMobileSize, setIsMobileSize] = useState(
-    typeof window !== "undefined" && window.innerWidth
+    typeof window !== "undefined" ? window.innerWidth : true
   )
 
   useEffect(() => {
