@@ -7,7 +7,6 @@ import "../css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.css"
 
 import "../css/style.css"
-import SEO from "../components/seo"
 
 const Header = () => {
   const { pathname } = useLocation()
