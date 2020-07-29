@@ -14,9 +14,7 @@ import MobileHeader from "./mobile-header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  const [isMobileSize, setIsMobileSize] = useState(
-    typeof window !== "undefined" && window.innerWidth < 768
-  )
+  const [isMobileSize, setIsMobileSize] = useState(true)
 
   useEffect(() => {
     const handleResize = () => {
