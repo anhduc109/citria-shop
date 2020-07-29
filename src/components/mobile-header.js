@@ -1,11 +1,16 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { useLocation } from "@reach/router"
 import { stack as Menu } from "react-burger-menu"
 
+import menuIcon from "../images/menu-icon.svg"
+
 const MobileHeader = () => {
+  const { pathname } = useLocation()
+
   return (
-    <div className="mobile-header">
-      <Menu>
+    <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
+      <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
         <AniLink className="menu-item" cover bg="black" duration={1} to="/">
           <h3>Home</h3>
         </AniLink>

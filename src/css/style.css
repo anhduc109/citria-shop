@@ -727,7 +727,7 @@ header nav ul.navbar-nav li a {
 
 /* header css */
 footer.site-footer {
-  background: #333;
+  background: black;
   padding: 0;
   text-align: center;
   flex-shrink: 0;
@@ -1432,11 +1432,22 @@ code {
 
 /* mobile header */
 /* Position and sizing of burger button */
-.mobile-header {
+.mobile-header-home {
+  position: absolute;
   z-index: 10;
-  background-color: #26262b;
+  background-color: transparent;
   height: 60px;
   width: 100%;
+  transition-delay: 500ms;
+}
+
+.mobile-header {
+  position: absolute;
+  z-index: 10;
+  background-color: black;
+  height: 60px;
+  width: 100%;
+  transition-delay: 500ms;
 }
 
 .citria-logo {
@@ -1448,10 +1459,10 @@ code {
 
 .bm-burger-button {
   position: absolute;
-  width: 26px;
-  height: 20px;
-  left: 25px;
-  top: 20px;
+  top: 5px;
+  width: 45px;
+  left: 20px;
+  fill: #fff;
 }
 
 /* Color/shape of burger icon bars */
@@ -1486,7 +1497,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #26262b;
+  background: white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -1513,12 +1524,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-item {
-  color: white;
+  color: black;
+  padding: 30px 0;
 }
 
 .menu-item:hover {
-  color: white;
+  color: black;
   text-decoration: none;
+}
+
+.menu-item:focus {
+  outline: none;
 }
 
 /* Image Gallery */
@@ -1582,14 +1598,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .store-page .product-main {
-    margin: 50px 0;
+    margin: 80px 0;
   }
 
   .details-page .product-details {
-    margin: 50px 0;
+    margin: 80px 0;
   }
 
   .about-page {
-    margin: 50px 0;
+    margin: 80px 0;
   }
 }
