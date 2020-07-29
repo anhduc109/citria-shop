@@ -4,6 +4,7 @@ import { useLocation } from "@reach/router"
 import { stack as Menu } from "react-burger-menu"
 
 import menuIcon from "../images/menu-icon.svg"
+import AnimateLink from "./AnimateLink"
 
 const MobileHeader = () => {
   const { pathname } = useLocation()
@@ -42,7 +43,9 @@ const MobileHeader = () => {
           <h3>Contact</h3>
         </AniLink>
       </Menu>
-      <div className="citria-logo">Citria</div>
+      <div className="citria-logo">
+        <AnimateLink path="/" name="Citria" color="white"></AnimateLink>
+      </div>
     </div>
   )
 }
