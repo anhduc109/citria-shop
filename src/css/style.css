@@ -912,10 +912,10 @@ span.price {
   max-width: 70%;
 }
 .store-page .product-main {
-  margin-top: 150px;
+  margin: 150px 0px;
 }
 .details-page .product-details {
-  margin-top: 150px;
+  margin: 150px 0px;
 }
 .with-underline {
   position: relative;
@@ -1551,7 +1551,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* About Page */
 .about-page {
-  margin-top: 150px;
+  margin: 150px 0px;
 }
 
 /* Responsive */
@@ -1568,5 +1568,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .image-gallery-left-nav .image-gallery-svg {
     height: 30px !important;
     width: 30px !important;
+  }
+
+  .store-page .product-main {
+    margin: 50px 0;
+  }
+
+  .details-page .product-details {
+    margin: 50px 0;
+  }
+
+  .about-page {
+    margin: 50px 0;
   }
 }
