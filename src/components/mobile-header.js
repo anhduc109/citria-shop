@@ -9,10 +9,10 @@ import AnimateLink from "./AnimateLink"
 const MobileHeader = () => {
   const { pathname } = useLocation()
 
-  console.log("ten la gi", pathname)
-
   return (
-    <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
+    <header
+      className={pathname === "/" ? "mobile-header-home" : "mobile-header"}
+    >
       <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
         <AniLink className="menu-item" cover bg="black" duration={1} to="/">
           <h3>Home</h3>
@@ -48,7 +48,7 @@ const MobileHeader = () => {
       <div className="citria-logo">
         <AnimateLink path="/" name="Citria" color="white"></AnimateLink>
       </div>
-    </div>
+    </header>
   )
 }
 
