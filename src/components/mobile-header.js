@@ -10,9 +10,7 @@ const MobileHeader = () => {
   const { pathname } = useLocation()
 
   return (
-    <header
-      className={pathname === "/" ? "mobile-header-home" : "mobile-header"}
-    >
+    <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
       <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
         <AniLink className="menu-item" cover bg="black" duration={1} to="/">
           <h3>Home</h3>
@@ -48,7 +46,7 @@ const MobileHeader = () => {
       <div className="citria-logo">
         <AnimateLink path="/" name="Citria" color="white"></AnimateLink>
       </div>
-    </header>
+    </div>
   )
 }
 
