@@ -1438,7 +1438,6 @@ code {
   background-color: transparent;
   height: 60px;
   width: 100%;
-  transition-delay: 500ms;
 }
 
 .mobile-header {
@@ -1447,7 +1446,6 @@ code {
   background-color: black;
   height: 60px;
   width: 100%;
-  transition-delay: 500ms;
 }
 
 .citria-logo {
