@@ -38,13 +38,13 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <>
+        <div className="body-wrapper">
           {!isMobileSize ? <Header /> : <MobileHeader />}
-          <div>
+          <div className="content-wrapper">
             <main>{children}</main>
           </div>
           <Footer />
-        </>
+        </div>
       )}
     />
   )

@@ -610,6 +610,17 @@ pre tt:after {
 * {
   font-family: "Josefin Sans", sans-serif;
 }
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
 .product-main .details_List .gatsby-image-wrapper {
   height: 300px;
 }
@@ -658,7 +669,6 @@ header.site-header-home {
   z-index: 9;
   padding: 20px 0;
   transition-delay: 500ms;
-  /* transition: 0.1s ease-in; */
 }
 
 header.site-header {
@@ -668,7 +678,7 @@ header.site-header {
   z-index: 9;
   padding: 20px 0;
   transition-delay: 500ms;
-  /* transition: 0.1s ease-in; */
+  flex: 1 0 auto;
 }
 
 ul.navbar-nav.mr-auto li {
@@ -720,6 +730,7 @@ footer.site-footer {
   background: #333;
   padding: 0;
   text-align: center;
+  flex-shrink: 0;
 }
 footer.site-footer * {
   color: #fff;
