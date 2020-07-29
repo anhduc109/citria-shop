@@ -9,6 +9,8 @@ import AnimateLink from "./AnimateLink"
 const MobileHeader = () => {
   const { pathname } = useLocation()
 
+  console.log("ten la gi", pathname)
+
   return (
     <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
       <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
