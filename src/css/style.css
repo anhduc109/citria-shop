@@ -1482,6 +1482,11 @@ code {
   width: 26px;
 }
 
+.shopping-cart-logo {
+  margin: 6px 0;
+  width: 28px;
+}
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: white;

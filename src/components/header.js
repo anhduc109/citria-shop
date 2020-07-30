@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { useLocation } from "@reach/router"
 import React from "react"
@@ -8,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.css"
 
 import "../css/style.css"
 import CitriaLogo from "../images/citria-logo.png"
+import ShoppingCartLogo from "../images/shopping-cart.svg"
 
 const Header = () => {
   const { pathname } = useLocation()
@@ -85,15 +85,16 @@ const Header = () => {
                     Contact
                   </AniLink>
                 </li>
+                <li className="nav-item">
+                  <AniLink cover bg="black" duration={1} to="/contact-us">
+                    <img
+                      className="shopping-cart-logo"
+                      src={ShoppingCartLogo}
+                      alt="Shopping cart"
+                    />
+                  </AniLink>
+                </li>
               </ul>
-              <div className="header-cart">
-                <Link
-                  className="Header__summary snipcart-summary snipcart-checkout"
-                  to="#"
-                >
-                  <i className="fas fa-cart-plus"></i>
-                </Link>
-              </div>
             </nav>
           </div>
         </div>
