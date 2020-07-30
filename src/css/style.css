@@ -715,7 +715,7 @@ header nav {
 header nav ul.navbar-nav {
   flex-direction: row;
   margin: 0;
-  width: 90%;
+  width: 100%;
   justify-content: flex-end;
 }
 header nav ul.navbar-nav li {

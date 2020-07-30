@@ -27,9 +27,9 @@ const Header = () => {
               <img className="citria-logo" src={CitriaLogo} alt="Citria logo" />
             </AniLink>
           </div>
-          <div className="col-sm-12 col-md-8 align-self-center">
+          <div className="col-sm-12 col-md-8">
             <nav>
-              <ul className="navbar-nav mr-auto">
+              <ul className="navbar-nav">
                 <li className="nav-item active">
                   <AniLink
                     className="nav-link"
