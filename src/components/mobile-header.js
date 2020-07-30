@@ -5,6 +5,7 @@ import { stack as Menu } from "react-burger-menu"
 
 import menuIcon from "../images/menu-icon.svg"
 import CitriaLogo from "../images/citria-logo.png"
+import ShoppingCartLogo from "../images/shopping-cart.svg"
 
 const MobileHeader = () => {
   const { pathname } = useLocation()
@@ -51,6 +52,13 @@ const MobileHeader = () => {
             alt="Citria logo"
           />
         </AniLink>
+      </div>
+      <div className="shopping-cart-wrapper">
+        <img
+          className="shopping-cart-mobile-logo"
+          src={ShoppingCartLogo}
+          alt="Shopping cart"
+        />
       </div>
     </div>
   )

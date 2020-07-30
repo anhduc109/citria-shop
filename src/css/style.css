@@ -221,7 +221,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  /* margin-bottom: 1.45rem; */
 }
 h1 {
   margin-left: 0;
@@ -1469,6 +1469,17 @@ code {
   height: 45px;
   margin-left: 15px;
   fill: #fff;
+}
+
+.shopping-cart-wrapper {
+  height: inherit;
+  text-align: right;
+}
+
+.shopping-cart-mobile-logo {
+  margin-top: 16px;
+  margin-right: 20px;
+  width: 26px;
 }
 
 /* Color/shape of burger icon bars */
