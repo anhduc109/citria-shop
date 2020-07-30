@@ -7,6 +7,7 @@ import "../css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.css"
 
 import "../css/style.css"
+import CitriaLogo from "../images/citria-logo.png"
 
 const Header = () => {
   const { pathname } = useLocation()
@@ -23,8 +24,7 @@ const Header = () => {
               duration={1}
               to="/"
             >
-              {/* <img src={logo} alt="logo"></img> */}
-              <h1>Citria</h1>
+              <img className="citria-logo" src={CitriaLogo} alt="Citria logo" />
             </AniLink>
           </div>
           <div className="col-sm-12 col-md-8 align-self-center">
@@ -93,15 +93,6 @@ const Header = () => {
                 >
                   <i className="fas fa-cart-plus"></i>
                 </Link>
-                {/* <button class="snipcart-add-item"
-                data-item-id="starry-night"
-                data-item-price="79.99"
-                data-item-url="/paintings/starry-night"
-                data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
-                data-item-image="/assets/images/starry-night.jpg"
-                data-item-name="The Starry Night">
-                Add to cart
-              </button> */}
               </div>
             </nav>
           </div>

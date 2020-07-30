@@ -1263,10 +1263,6 @@ a.header-logo {
 .site-footer .copyright_text p {
   margin: 0;
 }
-a.header-logo img {
-  margin: 0;
-  width: 220px;
-}
 .site-footer .menu-main-container {
   text-align: center;
 }
@@ -1451,17 +1447,27 @@ code {
 }
 
 .citria-logo {
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  padding-top: 9px;
+  margin: 0;
+  width: 110px;
+}
+
+.citria-logo-mobile {
+  margin: 0;
+  width: 80px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .bm-burger-button {
   position: absolute;
-  top: 5px;
+  margin-top: 8px;
   width: 45px;
-  left: 20px;
+  height: 45px;
+  margin-left: 15px;
   fill: #fff;
 }
 
