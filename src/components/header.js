@@ -41,7 +41,7 @@ const Header = () => {
                     Home
                   </AniLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <AniLink
                     className="nav-link"
                     cover
@@ -51,7 +51,7 @@ const Header = () => {
                   >
                     Blogs
                   </AniLink>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <AniLink
                     className="nav-link"
