@@ -5,4 +5,4 @@ function* doSomethingWhenAddingProduct(action) {
   yield localStorage.setItem("cart", JSON.stringify(state.product.cart))
 }
 
-export default [takeLatest("ADD_PRODUCT_TO_CART", doSomethingWhenAddingProduct)]
+export default [takeLatest("*", doSomethingWhenAddingProduct)]

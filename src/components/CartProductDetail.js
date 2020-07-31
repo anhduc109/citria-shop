@@ -1,11 +1,23 @@
 import React from "react"
 import Img from "gatsby-image"
+import { useDispatch } from "react-redux"
 
 import XIcon from "../images/x-icon.svg"
+import {
+  changeQuantityOfCartProduct,
+  removeProductFromCart,
+} from "../redux/actions"
 
 const CartProductDetail = ({ item }) => {
+  const dispatch = useDispatch()
+
   const handleChangeQuantity = evt => {
-    console.log(evt.target.value)
+    const newItem = { ...item, quantity: evt.target.value }
+    dispatch(changeQuantityOfCartProduct(newItem))
+  }
+
+  const handleRemoveProduct = () => {
+    dispatch(removeProductFromCart(item))
   }
 
   return (
@@ -44,7 +56,12 @@ const CartProductDetail = ({ item }) => {
         </select>
       </div>
       <div className="col-md-2 col-sm-2 col-2">
-        <img src={XIcon} alt="remove" />
+        <img
+          className="remove-logo"
+          src={XIcon}
+          alt="remove"
+          onClick={handleRemoveProduct}
+        />
       </div>
     </div>
   )
