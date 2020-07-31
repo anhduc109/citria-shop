@@ -1606,13 +1606,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 9px 20px;
 }
 
-/* About Page */
-.about-page {
+/* Cart Page */
+.cart-page {
   margin: 150px 0px;
 }
 
-/* Cart Page */
-.cart-page {
+/* About Page */
+.about-page {
   margin: 150px 0px;
 }
 

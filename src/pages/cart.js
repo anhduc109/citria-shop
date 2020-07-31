@@ -6,8 +6,10 @@ const CartPage = () => {
   return (
     <Layout>
       <SEO title="Cart" keywords={[`ecommerce`, `cart`, `react`]} />
-      <div className="container cart-page">
-        <h1>This is Cart</h1>
+      <div className="cart-page">
+        <div className="container">
+          <h1>This is Cart</h1>
+        </div>
       </div>
     </Layout>
   )
