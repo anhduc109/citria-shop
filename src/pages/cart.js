@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useSelector } from "react-redux"
 
 import Layout from "../components/layout"
@@ -6,7 +6,16 @@ import SEO from "../components/seo"
 import CartProductDetail from "../components/CartProductDetail"
 
 const CartPage = () => {
+  const [totalPrice, setTotalPrice] = useState(0)
+
   const cart = useSelector(state => state.product.cart)
+
+  useEffect(() => {
+    let newTotalPrice = 0
+    cart.map(item =>
+      setTotalPrice((newTotalPrice += item.price * item.quantity))
+    )
+  }, [cart])
 
   return cart.length > 0 ? (
     <Layout>
@@ -22,7 +31,7 @@ const CartPage = () => {
             </div>
             <div className="cart-total col-md-5">
               <h3>Total Price</h3>
-              <h3>100 VNĐ</h3>
+              <h3>{totalPrice} VNĐ</h3>
               <button className="add-to-cart-btn">Continue to checkout</button>
             </div>
           </div>
