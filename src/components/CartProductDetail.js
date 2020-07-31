@@ -12,7 +12,7 @@ const CartProductDetail = ({ item }) => {
   const dispatch = useDispatch()
 
   const handleChangeQuantity = evt => {
-    const newItem = { ...item, quantity: evt.target.value }
+    const newItem = { ...item, quantity: parseInt(evt.target.value) }
     dispatch(changeQuantityOfCartProduct(newItem))
   }
 
@@ -26,7 +26,7 @@ const CartProductDetail = ({ item }) => {
       <div className="col-md-7 col-sm-6 col-7">
         <h3>{item.name}</h3>
         <h4>Price: {item.price} VNĐ</h4>
-        <h4>Size: S</h4>
+        <h4>Size: {item.size}</h4>
         <select
           aria-required="false"
           value={item.quantity}

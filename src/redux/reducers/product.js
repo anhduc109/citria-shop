@@ -14,9 +14,25 @@ export default function product(
   switch (action.type) {
     case ADD_PRODUCT_TO_CART: {
       const { product } = action.payload
-      return {
-        ...state,
-        cart: [...state.cart, product],
+
+      if (state.cart.find(item => item.id === product.id)) {
+        return {
+          ...state,
+          cart: state.cart.map(item =>
+            item.id === product.id
+              ? {
+                  ...item,
+                  quantity:
+                    item.quantity === 20 ? item.quantity : (item.quantity += 1),
+                }
+              : item
+          ),
+        }
+      } else {
+        return {
+          ...state,
+          cart: [...state.cart, product],
+        }
       }
     }
 
