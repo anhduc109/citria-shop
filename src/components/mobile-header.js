@@ -54,11 +54,19 @@ const MobileHeader = () => {
         </AniLink>
       </div>
       <div className="shopping-cart-wrapper">
-        <img
-          className="shopping-cart-mobile-logo"
-          src={ShoppingCartLogo}
-          alt="Shopping cart"
-        />
+        <AniLink
+          className="animate-link"
+          cover
+          bg="black"
+          duration={1}
+          to="/cart"
+        >
+          <img
+            className="shopping-cart-mobile-logo"
+            src={ShoppingCartLogo}
+            alt="Shopping cart"
+          />
+        </AniLink>
       </div>
     </div>
   )

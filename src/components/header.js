@@ -86,7 +86,7 @@ const Header = () => {
                   </AniLink>
                 </li>
                 <li className="nav-item">
-                  <AniLink cover bg="black" duration={1} to="/contact-us">
+                  <AniLink cover bg="black" duration={1} to="/cart">
                     <img
                       className="shopping-cart-logo"
                       src={ShoppingCartLogo}
