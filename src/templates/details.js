@@ -10,6 +10,8 @@ import AnimateLink from "../components/AnimateLink"
 
 const ProductDetails = data => {
   const [imagesGallery, setImagesGallery] = useState([])
+  const [size, setSize] = useState("")
+  const [isSizeAlertOn, setIsSizeAlertOn] = useState(false)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -32,14 +34,22 @@ const ProductDetails = data => {
   ])
 
   const handleAddToCart = () => {
-    const product = {
-      name: data.data.contentfulProduct.name,
-      id: data.data.contentfulProduct.id,
-      img: data.data.contentfulProduct.image.fluid,
-      quantity: 1,
-      price: data.data.contentfulProduct.price,
-    }
-    dispatch(addProductToCart(product))
+    if (size !== "") {
+      const product = {
+        name: data.data.contentfulProduct.name,
+        size,
+        id: data.data.contentfulProduct.id + size,
+        img: data.data.contentfulProduct.image.fluid,
+        quantity: 1,
+        price: data.data.contentfulProduct.price,
+      }
+      dispatch(addProductToCart(product))
+      setIsSizeAlertOn(false)
+    } else setIsSizeAlertOn(true)
+  }
+
+  const handleChangeSize = evt => {
+    setSize(evt.target.value)
   }
 
   return (
@@ -70,11 +80,15 @@ const ProductDetails = data => {
                   data.data.contentfulProduct.details.childMarkdownRemark.html,
               }}
             />
-            <select class="form-control">
-              <option>Select size</option>
-              <option>S</option>
-              <option>M</option>
-              <option>L</option>
+            <select
+              class="form-control"
+              value={size}
+              onChange={handleChangeSize}
+            >
+              <option value={""}>Select size</option>
+              <option value={"S21321"}>S</option>
+              <option value={"M"}>M</option>
+              <option value={"L"}>L</option>
             </select>
             <br />
             <AnimateLink
@@ -84,7 +98,9 @@ const ProductDetails = data => {
                   Add to cart
                 </button>
               }
+              disabled={size === ""}
             ></AnimateLink>
+            <p hidden={!isSizeAlertOn}>You need to choose the size first</p>
           </div>
         </div>
       </div>
