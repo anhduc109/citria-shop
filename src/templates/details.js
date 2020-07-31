@@ -70,6 +70,13 @@ const ProductDetails = data => {
                   data.data.contentfulProduct.details.childMarkdownRemark.html,
               }}
             />
+            <select class="form-control">
+              <option>Select size</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+            <br />
             <AnimateLink
               path="/cart"
               content={

@@ -725,6 +725,19 @@ header nav ul.navbar-nav li a {
   color: #fff;
 }
 
+/* Form */
+.form-control {
+  border-radius: unset;
+}
+
+.form-control:active,
+.form-control:focus {
+  outline: 0px !important;
+  -webkit-appearance: none !important;
+  box-shadow: none !important;
+  border-color: none !important;
+}
+
 /* header css */
 footer.site-footer {
   background: black;
