@@ -86,7 +86,7 @@ const ProductDetails = data => {
               onChange={handleChangeSize}
             >
               <option value={""}>Select size</option>
-              <option value={"S21321"}>S</option>
+              <option value={"S"}>S</option>
               <option value={"M"}>M</option>
               <option value={"L"}>L</option>
             </select>
