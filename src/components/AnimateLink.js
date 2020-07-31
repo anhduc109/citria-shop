@@ -1,7 +1,7 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const AnimateLink = ({ path, name, color }) => (
+const AnimateLink = ({ path, content, color }) => (
   <AniLink
     style={{ color }}
     className="animate-link"
@@ -10,7 +10,7 @@ const AnimateLink = ({ path, name, color }) => (
     duration={1}
     to={path}
   >
-    {name}
+    {content}
   </AniLink>
 )
 

@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { addProductToCart } from "../redux/actions"
+import AnimateLink from "../components/AnimateLink"
 
 const ProductDetails = data => {
   const [imagesGallery, setImagesGallery] = useState([])
@@ -14,24 +15,31 @@ const ProductDetails = data => {
   useEffect(() => {
     const images = []
     images.push({
-      original: data.data.contentfulProduct.image.fixed.src,
-      thumbnail: data.data.contentfulProduct.image.fixed.src,
+      original: data.data.contentfulProduct.image.fluid.src,
+      thumbnail: data.data.contentfulProduct.image.fluid.src,
     })
     data.data.contentfulProduct.productMorePhotos.map(item => {
       const imageObject = {
-        original: item.fixed.src,
-        thumbnail: item.fixed.src,
+        original: item.fluid.src,
+        thumbnail: item.fluid.src,
       }
       return images.push(imageObject)
     })
     setImagesGallery(images)
   }, [
-    data.data.contentfulProduct.image.fixed.src,
+    data.data.contentfulProduct.image.fluid.src,
     data.data.contentfulProduct.productMorePhotos,
   ])
 
   const handleAddToCart = () => {
-    dispatch(addProductToCart({ name: "ahiho" }))
+    const product = {
+      name: data.data.contentfulProduct.name,
+      id: data.data.contentfulProduct.id,
+      img: data.data.contentfulProduct.image.fluid,
+      quantity: 1,
+      price: data.data.contentfulProduct.price,
+    }
+    dispatch(addProductToCart(product))
   }
 
   return (
@@ -62,9 +70,14 @@ const ProductDetails = data => {
                   data.data.contentfulProduct.details.childMarkdownRemark.html,
               }}
             />
-            <button className="add-to-cart-btn" onClick={handleAddToCart}>
-              Add to cart
-            </button>
+            <AnimateLink
+              path="/cart"
+              content={
+                <button className="add-to-cart-btn" onClick={handleAddToCart}>
+                  Add to cart
+                </button>
+              }
+            ></AnimateLink>
           </div>
         </div>
       </div>
@@ -82,11 +95,14 @@ export const query = graphql`
       slug
       image {
         id
-        fixed(width: 1200, height: 1200) {
-          width
-          height
+        fluid(maxWidth: 1200) {
+          base64
+          aspectRatio
           src
           srcSet
+          srcWebp
+          srcSetWebp
+          sizes
         }
       }
       price
@@ -97,8 +113,14 @@ export const query = graphql`
       }
       productMorePhotos {
         id
-        fixed(width: 1200, height: 1200) {
+        fluid(maxWidth: 1200) {
+          base64
+          aspectRatio
           src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
         }
       }
       rating

@@ -52,14 +52,14 @@ class IndexPost extends React.Component {
                   {items.node.image === null ? (
                     <div className="no-image">No Image</div>
                   ) : (
-                    <Img sizes={items.node.image.fixed} />
+                    <Img fluid={items.node.image.fluid} />
                   )}
 
                   <div className="details_inner">
                     <h2>
                       <AnimateLink
                         path={`/${items.node.slug}`}
-                        name={items.node.name}
+                        content={items.node.name}
                       />
                     </h2>
                     <div className="row">
@@ -98,11 +98,14 @@ export const query = graphql`
           slug
           rating
           image {
-            fixed(width: 1200, height: 1200) {
-              width
-              height
+            fluid(maxWidth: 1200) {
+              base64
+              aspectRatio
               src
               srcSet
+              srcWebp
+              srcSetWebp
+              sizes
             }
           }
           price
