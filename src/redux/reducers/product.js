@@ -8,8 +8,8 @@ export default function product(
     case "ADD_PRODUCT_TO_CART": {
       const { product } = action.payload
       return {
-        // ...state,
-        // ...cart,
+        ...state,
+        ...state.cart,
         product,
       }
     }

@@ -5,7 +5,9 @@ import createRootReducer from "./reducers"
 import rootSaga from "./sagas"
 
 const initState = {
-  cart: [],
+  product: {
+    cart: [],
+  },
 }
 
 export default function makeStore(initialState = initState) {
