@@ -8,7 +8,7 @@ import CartProductDetail from "../components/CartProductDetail"
 const CartPage = () => {
   const cart = useSelector(state => state.product.cart)
 
-  return (
+  return cart.length > 0 ? (
     <Layout>
       <SEO title="Cart" keywords={[`ecommerce`, `cart`, `react`]} />
       <div className="cart-page">
@@ -26,6 +26,15 @@ const CartPage = () => {
               <button className="add-to-cart-btn">Continue to checkout</button>
             </div>
           </div>
+        </div>
+      </div>
+    </Layout>
+  ) : (
+    <Layout>
+      <SEO title="Cart" keywords={[`ecommerce`, `cart`, `react`]} />
+      <div className="cart-page">
+        <div className="container">
+          <h3>Your shopping cart is empty</h3>
         </div>
       </div>
     </Layout>
