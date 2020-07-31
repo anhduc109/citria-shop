@@ -13,6 +13,14 @@ export default function product(
       }
     }
 
+    case "ADD_CART_FROM_LOCAL_STORAGE": {
+      const { cart } = action.payload
+      return {
+        ...state,
+        cart,
+      }
+    }
+
     default:
       return state
   }

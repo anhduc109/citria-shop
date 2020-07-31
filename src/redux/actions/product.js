@@ -6,3 +6,12 @@ export function addProductToCart(product) {
     },
   }
 }
+
+export function addCartFromLocalStorage(cart) {
+  return {
+    type: "ADD_CART_FROM_LOCAL_STORAGE",
+    payload: {
+      cart,
+    },
+  }
+}

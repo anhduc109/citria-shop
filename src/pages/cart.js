@@ -15,7 +15,7 @@ const CartPage = () => {
       <div className="cart-page">
         <div className="container">
           <h1>Shopping Cart</h1>
-          <div className="container row">
+          <div className="row">
             <div className="cart-items-detail col-md-7">
               {cart.map(item => (
                 <div key={item.id} className="row cart-item-detail">

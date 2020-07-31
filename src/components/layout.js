@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import MobileHeader from "./mobile-header"
 import Footer from "./footer"
+import { addCartFromLocalStorage } from "../redux/actions"
 
 const Layout = ({ children }) => {
   const [isMobileSize, setIsMobileSize] = useState(true)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,7 +18,10 @@ const Layout = ({ children }) => {
     }
     handleResize()
     window.addEventListener("resize", handleResize)
-  }, [])
+
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]")
+    cart.length > 0 && dispatch(addCartFromLocalStorage(cart))
+  }, [dispatch])
 
   return (
     <StaticQuery
