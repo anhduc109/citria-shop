@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react"
 import ImageGallery from "react-image-gallery"
 import { graphql } from "gatsby"
+import { useDispatch } from "react-redux"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { addProductToCart } from "../redux/actions"
 
 const ProductDetails = data => {
   const [imagesGallery, setImagesGallery] = useState([])
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const images = []
@@ -25,6 +29,10 @@ const ProductDetails = data => {
     data.data.contentfulProduct.image.fixed.src,
     data.data.contentfulProduct.productMorePhotos,
   ])
+
+  const handleAddToCart = () => {
+    dispatch(addProductToCart({ name: "ahiho" }))
+  }
 
   return (
     <Layout>
@@ -54,7 +62,9 @@ const ProductDetails = data => {
                   data.data.contentfulProduct.details.childMarkdownRemark.html,
               }}
             />
-            <button className="add-to-cart-btn">Add to cart</button>
+            <button className="add-to-cart-btn" onClick={handleAddToCart}>
+              Add to cart
+            </button>
           </div>
         </div>
       </div>

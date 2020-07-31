@@ -9,8 +9,7 @@ export default function product(
       const { product } = action.payload
       return {
         ...state,
-        ...state.cart,
-        product,
+        cart: [...state.cart, product],
       }
     }
 
