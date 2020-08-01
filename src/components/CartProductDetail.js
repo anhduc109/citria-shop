@@ -25,7 +25,7 @@ const CartProductDetail = ({ item }) => {
       <Img fluid={item.img} className="col-md-3 col-sm-4 col-3" />
       <div className="col-md-7 col-sm-6 col-7">
         <h6>{item.name}</h6>
-        <p>Price: {item.price} VNĐ</p>
+        <p>{item.price} VNĐ</p>
         <p>Size: {item.size}</p>
         <select
           aria-required="false"

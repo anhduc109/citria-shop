@@ -33,6 +33,12 @@ const CartPage = () => {
             <div className="cart-total col-md-5">
               <h4>Total Price</h4>
               <h5>{totalPrice} VNĐ</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+              <br />
               <AnimateLink
                 path="/check-out"
                 content={
