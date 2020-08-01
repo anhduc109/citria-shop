@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CartProductDetail from "../components/CartProductDetail"
+import AnimateLink from "../components/AnimateLink"
 
 const CartPage = () => {
   const [totalPrice, setTotalPrice] = useState(0)
@@ -32,7 +33,14 @@ const CartPage = () => {
             <div className="cart-total col-md-5">
               <h3>Total Price</h3>
               <h3>{totalPrice} VNĐ</h3>
-              <button className="add-to-cart-btn">Continue to checkout</button>
+              <AnimateLink
+                path="/check-out"
+                content={
+                  <button className="add-to-cart-btn">
+                    Continue to checkout
+                  </button>
+                }
+              />
             </div>
           </div>
         </div>
