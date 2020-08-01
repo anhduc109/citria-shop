@@ -23,7 +23,7 @@ const CartPage = () => {
       <SEO title="Cart" keywords={[`ecommerce`, `cart`, `react`]} />
       <div className="cart-page">
         <div className="container">
-          <h1>Shopping Cart</h1>
+          <h3>Shopping Cart</h3>
           <div className="row">
             <div className="cart-items-detail col-md-7">
               {cart.map(item => (
@@ -31,8 +31,8 @@ const CartPage = () => {
               ))}
             </div>
             <div className="cart-total col-md-5">
-              <h3>Total Price</h3>
-              <h3>{totalPrice} VNĐ</h3>
+              <h4>Total Price</h4>
+              <h5>{totalPrice} VNĐ</h5>
               <AnimateLink
                 path="/check-out"
                 content={

@@ -24,13 +24,13 @@ const CartProductDetail = ({ item }) => {
     <div key={item.id} className="row cart-item-detail">
       <Img fluid={item.img} className="col-md-3 col-sm-4 col-3" />
       <div className="col-md-7 col-sm-6 col-7">
-        <h3>{item.name}</h3>
-        <h4>Price: {item.price} VNĐ</h4>
-        <h4>Size: {item.size}</h4>
+        <h6>{item.name}</h6>
+        <p>Price: {item.price} VNĐ</p>
+        <p>Size: {item.size}</p>
         <select
           aria-required="false"
           value={item.quantity}
-          className="cart-quantity-select"
+          className="form-control cart-quantity-select"
           onChange={handleChangeQuantity}
         >
           <option value={1}>1</option>

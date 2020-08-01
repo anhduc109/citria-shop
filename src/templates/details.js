@@ -68,12 +68,12 @@ const ProductDetails = data => {
             />
           </div>
           <div className="product-description col-sm-12 col-md-4">
-            <h1 className="product-title">
+            <h3 className="product-title">
               {data.data.contentfulProduct.name}
-            </h1>
-            <h1 className="product-price">
+            </h3>
+            <h4 className="product-price">
               {data.data.contentfulProduct.price} VNĐ
-            </h1>
+            </h4>
             <div
               dangerouslySetInnerHTML={{
                 __html:

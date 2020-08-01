@@ -234,9 +234,9 @@ h1 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: bold;
+  font-weight: 800;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  /* font-size: 2.25rem; */
   line-height: 1.1;
 }
 h2 {
@@ -249,9 +249,9 @@ h2 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: bold;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  /* font-size: 1.62671rem; */
   line-height: 1.1;
 }
 h3 {
@@ -264,9 +264,9 @@ h3 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  /* font-size: 1.38316rem; */
   line-height: 1.1;
 }
 h4 {
@@ -279,9 +279,9 @@ h4 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: bold;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   line-height: 1.1;
 }
 h5 {
@@ -294,9 +294,9 @@ h5 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: bold;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  /* font-size: 0.85028rem; */
   line-height: 1.1;
 }
 h6 {
@@ -309,9 +309,9 @@ h6 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: bold;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  /* font-size: 0.78405rem; */
   line-height: 1.1;
 }
 hgroup {
@@ -376,7 +376,8 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 figure {
   margin-left: 0;
@@ -633,7 +634,7 @@ pre tt:after {
 }
 
 .product-main .details_List .details_inner {
-  padding: 20px;
+  padding: 20px 0px;
   position: relative;
   display: inline-block;
 }
@@ -660,6 +661,10 @@ pre tt:after {
 
 .product-details .gatsby-image-wrapper {
   height: 500px;
+}
+
+.product-gallery {
+  margin-bottom: 15px;
 }
 
 /* header css */
@@ -729,6 +734,7 @@ header nav ul.navbar-nav li a {
 /* Form */
 .form-control {
   border-radius: unset;
+  font-size: 14px;
 }
 
 .form-control:active,
@@ -736,7 +742,7 @@ header nav ul.navbar-nav li a {
   outline: 0px !important;
   -webkit-appearance: none !important;
   box-shadow: none !important;
-  border-color: none !important;
+  border-color: black !important;
 }
 
 /* header css */
@@ -764,9 +770,6 @@ footer.site-footer * {
 }
 .product-main .details_List .details_inner p {
   font-size: 16px;
-}
-.product-main .details_List .details_inner p {
-  font-size: 17px;
 }
 .snip-layout .snip-header {
   background: #333 !important;
@@ -937,10 +940,10 @@ span.price {
   max-width: 70%;
 }
 .store-page .product-main {
-  margin: 150px 0px;
+  margin: 120px 0px;
 }
 .details-page .product-details {
-  margin: 150px 0px;
+  margin: 120px 0px;
 }
 .with-underline {
   position: relative;
@@ -1561,6 +1564,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .animate-link:hover {
   text-decoration: none;
+  color: black;
 }
 /* Styling of overlay */
 .bm-overlay {
@@ -1622,7 +1626,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Cart Page */
 .cart-page {
-  margin: 150px 0px;
+  margin: 120px 0px;
 }
 
 .cart-item-detail {
@@ -1630,9 +1634,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .cart-quantity-select {
-  height: 40px;
   width: 80px;
-  padding: 5px 10px;
 }
 
 .remove-logo {
@@ -1641,12 +1643,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Check Out Page */
 .check-out-page {
-  margin: 150px 0px;
+  margin: 120px 0px;
 }
 
 /* About Page */
 .about-page {
-  margin: 150px 0px;
+  margin: 120px 0px;
 }
 
 /* Responsive */

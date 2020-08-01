@@ -56,15 +56,13 @@ class IndexPost extends React.Component {
                   )}
 
                   <div className="details_inner">
-                    <h2>
-                      <AnimateLink
-                        path={`/${items.node.slug}`}
-                        content={items.node.name}
-                      />
-                    </h2>
+                    <AnimateLink
+                      path={`/${items.node.slug}`}
+                      content={<h5>{items.node.name}</h5>}
+                    />
                     <div className="row">
                       <div className="col-sm-12 align-self-center">
-                        <span className="price">{items.node.price} VNĐ</span>
+                        <h6>{items.node.price} VNĐ</h6>
                       </div>
                     </div>
                   </div>
