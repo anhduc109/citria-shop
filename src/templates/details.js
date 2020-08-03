@@ -75,13 +75,14 @@ const ProductDetails = data => {
               {data.data.contentfulProduct.price} VNĐ
             </h4>
             <div
+              className="product-detail-text"
               dangerouslySetInnerHTML={{
                 __html:
                   data.data.contentfulProduct.details.childMarkdownRemark.html,
               }}
             />
             <select
-              class="form-control"
+              class="form-control product-size-select"
               value={size}
               onChange={handleChangeSize}
             >
@@ -90,7 +91,6 @@ const ProductDetails = data => {
               <option value={"M"}>M</option>
               <option value={"L"}>L</option>
             </select>
-            <br />
             <AnimateLink
               path="/cart"
               content={
@@ -100,7 +100,9 @@ const ProductDetails = data => {
               }
               disabled={size === ""}
             ></AnimateLink>
-            <p hidden={!isSizeAlertOn}>You need to choose the size first</p>
+            <div hidden={!isSizeAlertOn} className="product-size-alert">
+              <p>You need to choose the size first</p>
+            </div>
           </div>
         </div>
       </div>

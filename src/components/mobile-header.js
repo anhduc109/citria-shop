@@ -14,7 +14,7 @@ const MobileHeader = () => {
     <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
       <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
         <AniLink className="menu-item" cover bg="black" duration={1} to="/">
-          <h3>Home</h3>
+          <h4>Home</h4>
         </AniLink>
         <AniLink
           className="menu-item"
@@ -23,7 +23,7 @@ const MobileHeader = () => {
           duration={1}
           to="/store"
         >
-          <h3>Store</h3>
+          <h4>Store</h4>
         </AniLink>
         <AniLink
           className="menu-item"
@@ -32,7 +32,7 @@ const MobileHeader = () => {
           duration={1}
           to="/about"
         >
-          <h3>About</h3>
+          <h4>About</h4>
         </AniLink>
         <AniLink
           className="menu-item"
@@ -41,7 +41,7 @@ const MobileHeader = () => {
           duration={1}
           to="/contact-us"
         >
-          <h3>Contact</h3>
+          <h4>Contact</h4>
         </AniLink>
       </Menu>
       <div className="citria-logo-mobile-wrapper">
