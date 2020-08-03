@@ -20,7 +20,7 @@ const CheckOutPage = () => {
                   <div className="row">
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput check-out-label">
+                        <label for="firstNameInputl">
                           Email<span className="input-required">*</span>
                         </label>
                         <input
@@ -33,7 +33,7 @@ const CheckOutPage = () => {
                     </div>
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput check-out-label">
+                        <label for="firstNameInput">
                           Phone number<span className="input-required">*</span>
                         </label>
                         <input
@@ -48,7 +48,7 @@ const CheckOutPage = () => {
                   <div className="row">
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput check-out-label">
+                        <label for="firstNameInput">
                           First name<span className="input-required">*</span>
                         </label>
                         <input
@@ -61,7 +61,7 @@ const CheckOutPage = () => {
                     </div>
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput check-out-label">
+                        <label for="firstNameInput">
                           Last name<span className="input-required">*</span>
                         </label>
                         <input
