@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css"
 
 import "../css/style.css"
 import CitriaLogo from "../images/citria-logo.png"
-import ShoppingCartLogo from "../images/shopping-cart.svg"
+import ShoppingCartLogo from "../images/shopping-cart-2.svg"
 
 const Header = () => {
   const { pathname } = useLocation()

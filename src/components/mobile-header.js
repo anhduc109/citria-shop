@@ -5,7 +5,7 @@ import { stack as Menu } from "react-burger-menu"
 
 import menuIcon from "../images/menu-icon.svg"
 import CitriaLogo from "../images/citria-logo.png"
-import ShoppingCartLogo from "../images/shopping-cart.svg"
+import ShoppingCartLogo from "../images/shopping-cart-2.svg"
 
 const MobileHeader = () => {
   const { pathname } = useLocation()
