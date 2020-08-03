@@ -279,7 +279,7 @@ h4 {
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
   color: inherit;
-  font-weight: 400;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
   /* font-size: 1rem; */
   line-height: 1.1;
@@ -1655,6 +1655,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .cart-quantity-select {
   width: 80px;
+}
+
+.cart-total {
+  padding: 30px 0px;
 }
 
 .remove-logo {

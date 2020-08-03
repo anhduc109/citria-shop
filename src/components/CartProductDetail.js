@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { useDispatch } from "react-redux"
 
 import XIcon from "../images/x-icon.svg"
+import AnimateLink from "./AnimateLink"
 import {
   changeQuantityOfCartProduct,
   removeProductFromCart,
@@ -22,9 +23,9 @@ const CartProductDetail = ({ item }) => {
 
   return (
     <div key={item.id} className="row cart-item-detail">
-      <Img fluid={item.img} className="col-md-3 col-sm-4 col-3" />
+      <Img fixed={item.img} className="col-md-3 col-sm-4 col-3" />
       <div className="col-md-7 col-sm-6 col-7">
-        <h6>{item.name}</h6>
+        <AnimateLink path={`/${item.slug}`} content={<h6>{item.name}</h6>} />
         <p>{item.price} VNĐ</p>
         <p>Size: {item.size}</p>
         <select

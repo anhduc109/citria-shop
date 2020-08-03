@@ -17,19 +17,19 @@ const ProductDetails = data => {
   useEffect(() => {
     const images = []
     images.push({
-      original: data.data.contentfulProduct.image.fluid.src,
-      thumbnail: data.data.contentfulProduct.image.fluid.src,
+      original: data.data.contentfulProduct.image.fixed.src,
+      thumbnail: data.data.contentfulProduct.image.fixed.src,
     })
     data.data.contentfulProduct.productMorePhotos.map(item => {
       const imageObject = {
-        original: item.fluid.src,
-        thumbnail: item.fluid.src,
+        original: item.fixed.src,
+        thumbnail: item.fixed.src,
       }
       return images.push(imageObject)
     })
     setImagesGallery(images)
   }, [
-    data.data.contentfulProduct.image.fluid.src,
+    data.data.contentfulProduct.image.fixed.src,
     data.data.contentfulProduct.productMorePhotos,
   ])
 
@@ -39,9 +39,10 @@ const ProductDetails = data => {
         name: data.data.contentfulProduct.name,
         size,
         id: data.data.contentfulProduct.id + size,
-        img: data.data.contentfulProduct.image.fluid,
+        img: data.data.contentfulProduct.image.fixed,
         quantity: 1,
         price: data.data.contentfulProduct.price,
+        slug: data.data.contentfulProduct.slug,
       }
       dispatch(addProductToCart(product))
       setIsSizeAlertOn(false)
@@ -120,14 +121,11 @@ export const query = graphql`
       slug
       image {
         id
-        fluid(maxWidth: 1200) {
-          base64
-          aspectRatio
+        fixed(width: 1200, height: 1500) {
           src
           srcSet
           srcWebp
           srcSetWebp
-          sizes
         }
       }
       price
@@ -138,14 +136,11 @@ export const query = graphql`
       }
       productMorePhotos {
         id
-        fluid(maxWidth: 1200) {
-          base64
-          aspectRatio
+        fixed(width: 1200, height: 1500) {
           src
           srcSet
           srcWebp
           srcSetWebp
-          sizes
         }
       }
       rating
