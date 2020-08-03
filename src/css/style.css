@@ -736,6 +736,11 @@ header nav ul.navbar-nav li a {
   border-color: black !important;
 }
 
+.check-out-input {
+  padding: 14px 25px 14px 10px;
+  height: 45px;
+}
+
 /* header css */
 footer.site-footer {
   background: black;
@@ -1668,6 +1673,22 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Check Out Page */
 .check-out-page {
   margin: 120px 0px;
+}
+
+.check-out-page h5 {
+  font-weight: 500;
+}
+
+.check-out-section-wrapper {
+  margin: 35px 0;
+}
+
+.check-out-label {
+  font-size: 16px;
+}
+
+.input-required {
+  color: #ef3d56;
 }
 
 /* About Page */
