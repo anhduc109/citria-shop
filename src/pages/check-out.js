@@ -14,32 +14,35 @@ const CheckOutPage = () => {
         <div className="container">
           <div className="row">
             <div className="check-out-information col-md-7 col-sm-12 col-12">
-              <form>
+              <form name="check-out-form" data-netlify="true" method="POST">
+                <input type="hidden" name="form-name" value="contact" />
                 <h5>MY INFORMATION</h5>
                 <div className="check-out-section-wrapper">
                   <div className="row">
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInputl">
+                        <label htmlFor="emailInput">
                           Email<span className="input-required">*</span>
                         </label>
                         <input
                           type="text"
                           class="form-control check-out-input"
                           id="emailInput"
+                          name="email"
                           required
                         />
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput">
+                        <label htmlFor="phoneNumberInput">
                           Phone number<span className="input-required">*</span>
                         </label>
                         <input
                           type="text"
                           class="form-control check-out-input"
                           id="phoneNumberInput"
+                          name="phone"
                           required
                         />
                       </div>
@@ -48,26 +51,28 @@ const CheckOutPage = () => {
                   <div className="row">
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput">
+                        <label htmlFor="firstNameInput">
                           First name<span className="input-required">*</span>
                         </label>
                         <input
                           type="text"
                           class="form-control check-out-input"
                           id="firstNameInput"
+                          name="first-name"
                           required
                         />
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-12 col-12">
                       <div class="form-group">
-                        <label for="firstNameInput">
+                        <label htmlFor="lastNameInput">
                           Last name<span className="input-required">*</span>
                         </label>
                         <input
                           type="text"
                           class="form-control check-out-input"
                           id="lastNameInput"
+                          name="last-name"
                           required
                         />
                       </div>
@@ -75,6 +80,73 @@ const CheckOutPage = () => {
                   </div>
                 </div>
                 <h5>SHIPPING ADDRESS</h5>
+                <div className="check-out-section-wrapper">
+                  <div className="row">
+                    <div className="col-md-6 col-sm-12 col-12">
+                      <div class="form-group">
+                        <label htmlFor="addressInput">
+                          Address<span className="input-required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control check-out-input"
+                          id="addressInput"
+                          name="address"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 col-12">
+                      <div class="form-group">
+                        <label htmlFor="districtInput">
+                          District<span className="input-required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control check-out-input"
+                          id="districtInput"
+                          name="district"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-12 col-12">
+                      <div class="form-group">
+                        <label htmlFor="cityInput">
+                          City<span className="input-required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control check-out-input"
+                          id="cityInput"
+                          name="city"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {cart.map((item, index) => (
+                  <input
+                    key={item.id}
+                    type="text"
+                    class="form-control check-out-input"
+                    id={`Ordered product ${index + 1}`}
+                    name={`Ordered-product-${index + 1}`}
+                    value={`Product: ${item.name}, Size: ${item.size}, Quantity: ${item.quantity}, Price: ${item.price} VNĐ`}
+                    hidden
+                  />
+                ))}
+                <div className="row">
+                  <div className="col-md-6 col-sm-6 col-6"></div>
+                  <div className="col-md-6 col-sm-6 col-6">
+                    <button type="submit" className="add-to-cart-btn">
+                      Submit
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
             <div className="check-out-summary col-md-5 col-sm-12 col-12">
