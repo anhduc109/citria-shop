@@ -1,11 +1,19 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useSelector } from "react-redux"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const CheckOutPage = () => {
+  const [totalPrice, setTotalPrice] = useState(0)
   const cart = useSelector(state => state.product.cart)
+
+  useEffect(() => {
+    let newTotalPrice = 0
+    cart.map(item =>
+      setTotalPrice((newTotalPrice += item.price * item.quantity))
+    )
+  }, [cart])
 
   return cart.length > 0 ? (
     <Layout>
@@ -139,6 +147,14 @@ const CheckOutPage = () => {
                     hidden
                   />
                 ))}
+                <input
+                  type="text"
+                  class="form-control check-out-input"
+                  id="totalPrice"
+                  name="total-price"
+                  value={`${totalPrice} VNĐ`}
+                  hidden
+                />
                 <div className="row">
                   <div className="col-md-6 col-sm-6 col-6"></div>
                   <div className="col-md-6 col-sm-6 col-6">
