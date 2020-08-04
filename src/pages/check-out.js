@@ -15,7 +15,7 @@ const CheckOutPage = () => {
           <div className="row">
             <div className="check-out-information col-md-7 col-sm-12 col-12">
               <form name="check-out-form" data-netlify="true" method="POST">
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="check-out-form" />
                 <h5>MY INFORMATION</h5>
                 <div className="check-out-section-wrapper">
                   <div className="row">
