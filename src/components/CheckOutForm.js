@@ -81,6 +81,7 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
     onSubmit: values => {
       const submitData = {
         ...values,
+        totalPrice: totalPrice,
       }
 
       fetch("/", {
@@ -101,7 +102,7 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
           data-netlify="true"
           onSubmit={formik.handleSubmit}
         >
-          <input type="hidden" name="form-name" value="check-out-form" />
+          {/* <input type="hidden" name="form-name" value="check-out-form" /> */}
           <h5>MY INFORMATION</h5>
           <div className="check-out-section-wrapper">
             <div className="row">
