@@ -16,14 +16,13 @@ const CheckOutPage = () => {
       setTotalPrice((newTotalPrice += item.price * item.quantity))
     )
 
-    setProductsInfo(
-      cart.map(
-        (item, index) =>
-          `Product ${index + 1}: ${item.name}, Quantiy: ${
-            item.quantity
-          }, Price: ${item.price} VNĐ.`
-      )
-    )
+    let newProductsInfo = ""
+    cart.map((item, index) => {
+      newProductsInfo += `Product ${index + 1}: ${item.name}, Size: ${
+        item.size
+      } Quantiy: ${item.quantity}, Price: ${item.price} VNĐ.\n`
+    })
+    setProductsInfo(newProductsInfo)
   }, [cart])
 
   // return cart.length > 0 ? (

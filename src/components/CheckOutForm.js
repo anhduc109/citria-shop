@@ -6,6 +6,8 @@ import qs from "qs"
 const CheckOutForm = ({ totalPrice, productsInfo }) => {
   const cart = useSelector(state => state.product.cart)
 
+  console.log(productsInfo)
+
   let productsSubmitDetail = []
   cart.map(item => {
     const productInfo = {
