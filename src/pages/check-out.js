@@ -15,7 +15,8 @@ const CheckOutPage = () => {
     )
   }, [cart])
 
-  return cart.length > 0 ? (
+  // return cart.length > 0 ? (
+  return (
     <Layout>
       <SEO title="Check Out" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
       <div className="check-out-page">
@@ -178,19 +179,20 @@ const CheckOutPage = () => {
         </div>
       </div>
     </Layout>
-  ) : (
-    <Layout>
-      <SEO
-        title="Check Out fail"
-        keywords={[`Citriavn`, `Citria`, `ecommerce`]}
-      />
-      <div className="check-out-page">
-        <div className="container">
-          <h3>Sorry! Your shopping cart is empty. You cannot checkout.</h3>
-        </div>
-      </div>
-    </Layout>
   )
+  // ) : (
+  //   <Layout>
+  //     <SEO
+  //       title="Check Out fail"
+  //       keywords={[`Citriavn`, `Citria`, `ecommerce`]}
+  //     />
+  //     <div className="check-out-page">
+  //       <div className="container">
+  //         <h3>Sorry! Your shopping cart is empty. You cannot checkout.</h3>
+  //       </div>
+  //     </div>
+  //   </Layout>
+  // )
 }
 
 export default CheckOutPage
