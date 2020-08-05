@@ -16,13 +16,26 @@ const CheckOutPage = () => {
     )
   }, [cart])
 
+  const productsInput = () => {
+    return cart.map((item, index) => (
+      <input
+        key={item.id}
+        type="text"
+        id={`Ordered product ${index + 1}`}
+        name={`Ordered-product-${index + 1}`}
+        value={`Product: ${item.name}, Size: ${item.size}, Quantity: ${item.quantity}, Price: ${item.price} VNĐ`}
+        hidden
+      />
+    ))
+  }
+
   // return cart.length > 0 ? (
   return (
     <Layout>
       <SEO title="Check Out" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
       <div className="check-out-page">
         <div className="container">
-          <CheckOutForm totalPrice={totalPrice} />
+          <CheckOutForm totalPrice={totalPrice} productsInput={productsInput} />
         </div>
       </div>
     </Layout>

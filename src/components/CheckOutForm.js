@@ -3,7 +3,7 @@ import { Formik, useFormik } from "formik"
 import { useSelector } from "react-redux"
 import qs from "qs"
 
-const CheckOutForm = ({ totalPrice }) => {
+const CheckOutForm = ({ totalPrice, productsInput }) => {
   const cart = useSelector(state => state.product.cart)
 
   let productsSubmitDetail = []
@@ -81,15 +81,12 @@ const CheckOutForm = ({ totalPrice }) => {
     onSubmit: values => {
       const submitData = {
         ...values,
-        // productsSubmitDetail,
-        totalPrice: `${totalPrice} VND`,
       }
 
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        // body: qs.stringify(submitData),
-        body: "yo",
+        body: qs.stringify(submitData),
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error))
@@ -263,18 +260,15 @@ const CheckOutForm = ({ totalPrice }) => {
                 </div>
               </div>
             </div>
-          </div>
-          {/* {cart.map((item, index) => (
+            {productsInput()}
             <input
-              key={item.id}
               type="text"
-              class="form-control check-out-input"
-              id={`Ordered product ${index + 1}`}
-              name={`Ordered-product-${index + 1}`}
-              value={`Product: ${item.name}, Size: ${item.size}, Quantity: ${item.quantity}, Price: ${item.price} VNĐ`}
               hidden
+              id="totalPrice"
+              name="totalPrice"
+              value={`${totalPrice} VNĐ`}
             />
-          ))} */}
+          </div>
           <div className="row">
             <div className="col-md-6 col-sm-6 col-6"></div>
             <div className="col-md-6 col-sm-6 col-6">
