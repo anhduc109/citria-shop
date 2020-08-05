@@ -7,6 +7,7 @@ import CheckOutForm from "../components/CheckOutForm"
 
 const CheckOutPage = () => {
   const [totalPrice, setTotalPrice] = useState(0)
+  const [productsInfo, setProductsInfo] = useState("")
   const cart = useSelector(state => state.product.cart)
 
   useEffect(() => {
@@ -14,20 +15,16 @@ const CheckOutPage = () => {
     cart.map(item =>
       setTotalPrice((newTotalPrice += item.price * item.quantity))
     )
-  }, [cart])
 
-  const productsInput = () => {
-    return cart.map((item, index) => (
-      <input
-        key={item.id}
-        type="text"
-        id={`Ordered product ${index + 1}`}
-        name={`Ordered-product-${index + 1}`}
-        value={`Product: ${item.name}, Size: ${item.size}, Quantity: ${item.quantity}, Price: ${item.price} VNĐ`}
-        hidden
-      />
-    ))
-  }
+    setProductsInfo(
+      cart.map(
+        (item, index) =>
+          `Product ${index + 1}: ${item.name}, Quantiy: ${
+            item.quantity
+          }, Price: ${item.price} VNĐ.`
+      )
+    )
+  }, [cart])
 
   // return cart.length > 0 ? (
   return (
@@ -35,7 +32,7 @@ const CheckOutPage = () => {
       <SEO title="Check Out" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
       <div className="check-out-page">
         <div className="container">
-          <CheckOutForm totalPrice={totalPrice} productsInput={productsInput} />
+          <CheckOutForm totalPrice={totalPrice} productsInfo={productsInfo} />
         </div>
       </div>
     </Layout>

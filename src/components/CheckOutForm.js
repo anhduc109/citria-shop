@@ -3,7 +3,7 @@ import { Formik, useFormik } from "formik"
 import { useSelector } from "react-redux"
 import qs from "qs"
 
-const CheckOutForm = ({ totalPrice, productsInput }) => {
+const CheckOutForm = ({ totalPrice, productsInfo }) => {
   const cart = useSelector(state => state.product.cart)
 
   let productsSubmitDetail = []
@@ -269,14 +269,9 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
             <input
               type="text"
               hidden
-              id="productInfo"
-              name="productInfo"
-              value={cart.map(
-                (item, index) =>
-                  `Product ${index + 1}: ${item.name}, Quantiy: ${
-                    item.quantity
-                  }, Price: ${item.price} VNĐ.`
-              )}
+              id="productsInfo"
+              name="productsInfo"
+              value={productsInfo}
             />
             <input
               type="text"
