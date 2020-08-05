@@ -83,7 +83,7 @@ const CheckOutForm = ({ totalPrice, productsInfo }) => {
       const submitData = {
         ...values,
         totalPrice: `${totalPrice} VNĐ`,
-        product1: "chao ae nhe",
+        productsInfo: productsInfo,
       }
 
       fetch("/", {
