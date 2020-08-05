@@ -79,32 +79,17 @@ const CheckOutForm = ({ totalPrice }) => {
     validateOnBlur: false,
     validate,
     onSubmit: values => {
-      // const submitData = {
-      //     ...values,
-      //   };
-      //   const options = {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      //     data: qs.stringify(data),
-      //     url: "/"
-      //   };
-      //   try {
-      //     await axios(options);
-      //   } catch (e) {
-      //     setErrMsg(e.message);
-      //   }
       const submitData = {
         ...values,
         // productsSubmitDetail,
         totalPrice: `${totalPrice} VND`,
       }
 
-      console.log(qs.stringify(submitData))
-
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: qs.stringify(submitData),
+        // body: qs.stringify(submitData),
+        body: "yo",
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error))
