@@ -1,9 +1,21 @@
 import React from "react"
 import { Formik, useFormik } from "formik"
 import { useSelector } from "react-redux"
+import qs from "qs"
 
 const CheckOutForm = ({ totalPrice }) => {
   const cart = useSelector(state => state.product.cart)
+
+  let productsSubmitDetail = []
+  cart.map(item => {
+    const productInfo = {
+      name: item.name,
+      size: item.size,
+      price: item.price,
+      quantity: item.quantity,
+    }
+    productsSubmitDetail.push(productInfo)
+  })
 
   const validate = values => {
     const errors = {}
@@ -67,7 +79,33 @@ const CheckOutForm = ({ totalPrice }) => {
     validateOnBlur: false,
     validate,
     onSubmit: values => {
-      console.log(values)
+      // const submitData = {
+      //     ...values,
+      //   };
+      //   const options = {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //     data: qs.stringify(data),
+      //     url: "/"
+      //   };
+      //   try {
+      //     await axios(options);
+      //   } catch (e) {
+      //     setErrMsg(e.message);
+      //   }
+      const submitData = {
+        ...values,
+        productsSubmitDetail,
+        totalPrice: `${totalPrice} VNĐ`,
+      }
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: qs.stringify(submitData),
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error))
     },
   })
 

@@ -24,6 +24,7 @@
     "graphql": "^14.3.0",
     "gsap": "^3.4.0",
     "prop-types": "^15.7.2",
+    "qs": "^6.9.4",
     "react": "^16.8.6",
     "react-burger-menu": "^2.7.0",
     "react-dom": "^16.8.6",
