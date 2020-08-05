@@ -66,7 +66,7 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
 
   const formik = useFormik({
     initialValues: {
-      "form-name": "check-out-form",
+      "form-name": "check-out-form-testing-only",
       email: "",
       phoneNumber: "",
       firstName: "",
@@ -79,14 +79,12 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
     validateOnChange: false,
     validateOnBlur: false,
     validate,
-    onSubmit: values => {
+    onSubmit: (values, event) => {
       const submitData = {
         ...values,
         totalPrice: `${totalPrice} VNĐ`,
         product1: "chao ae nhe",
       }
-
-      console.log(qs.stringify(submitData))
 
       fetch("/", {
         method: "POST",
@@ -102,7 +100,7 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
     <div className="row">
       <div className="check-out-information col-md-7 col-sm-12 col-12">
         <form
-          name="check-out-form"
+          name="check-out-form-testing-only"
           data-netlify="true"
           onSubmit={formik.handleSubmit}
         >
