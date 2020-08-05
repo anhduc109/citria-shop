@@ -22,7 +22,13 @@ const CheckOutPage = () => {
         <div className="container">
           <div className="row">
             <div className="check-out-information col-md-7 col-sm-12 col-12">
-              <form name="check-out-form" netlify method="POST">
+              <form
+                name="check-out-form"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                netlify-honeypot="bot-field"
+                method="POST"
+              >
                 <input type="hidden" name="form-name" value="check-out-form" />
                 <h5>MY INFORMATION</h5>
                 <div className="check-out-section-wrapper">
