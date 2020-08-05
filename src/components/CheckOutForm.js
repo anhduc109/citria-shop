@@ -86,8 +86,6 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
         product1: "chao ae nhe",
       }
 
-      console.log(qs.stringify(submitData))
-
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -268,7 +266,18 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
                 </div>
               </div>
             </div>
-            {productsInput()}
+            <input
+              type="text"
+              hidden
+              id="productInfo"
+              name="productInfo"
+              value={cart.map(
+                (item, index) =>
+                  `Product ${index + 1}: ${item.name}, Quantiy: ${
+                    item.quantity
+                  }, Price: ${item.price} VNĐ.`
+              )}
+            />
             <input
               type="text"
               hidden
