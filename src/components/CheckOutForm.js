@@ -102,7 +102,10 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
         <form
           name="check-out-form-testing-only"
           data-netlify="true"
-          onSubmit={formik.handleSubmit}
+          onSubmit={e => {
+            e.preventDefault()
+            formik.handleSubmit()
+          }}
         >
           {/* <input type="hidden" name="form-name" value="check-out-form" /> */}
           <h5>MY INFORMATION</h5>
