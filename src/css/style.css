@@ -733,7 +733,7 @@ header nav ul.navbar-nav li a {
   outline: 0px !important;
   -webkit-appearance: none !important;
   box-shadow: none !important;
-  border-color: black !important;
+  border-color: black;
 }
 
 .check-out-input {
