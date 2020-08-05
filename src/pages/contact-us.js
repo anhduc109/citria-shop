@@ -9,7 +9,8 @@ class Contact extends React.Component {
         <SEO title="Contact Us" keywords={[`gatsby`, `Contact Us`, `react`]} />
         <div className="Contact-us">
           <div className="container">
-            <form name="contact" data-netlify="true" method="POST">
+            Contact Us
+            {/* <form name="contact" data-netlify="true" method="POST">
               <input type="hidden" name="form-name" value="contact" />
               <label>
                 Your name
@@ -24,7 +25,7 @@ class Contact extends React.Component {
                 <textarea name="message" required></textarea>
               </label>
               <button type="submit">Send</button>
-            </form>
+            </form> */}
           </div>
         </div>
       </Layout>
