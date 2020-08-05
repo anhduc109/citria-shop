@@ -95,9 +95,11 @@ const CheckOutForm = ({ totalPrice }) => {
       //   }
       const submitData = {
         ...values,
-        productsSubmitDetail,
-        totalPrice: `${totalPrice} VNĐ`,
+        // productsSubmitDetail,
+        totalPrice: `${totalPrice} VND`,
       }
+
+      console.log(qs.stringify(submitData))
 
       fetch("/", {
         method: "POST",
@@ -196,6 +198,7 @@ const CheckOutForm = ({ totalPrice }) => {
                     className={`form-control check-out-input ${formik.errors
                       .lastName && "is-invalid"}`}
                     id="lastName"
+                    name="lastName"
                     onChange={formik.handleChange}
                     value={formik.values.lastName}
                   />
