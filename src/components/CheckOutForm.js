@@ -82,9 +82,11 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
     onSubmit: values => {
       const submitData = {
         ...values,
-        totalPrice: totalPrice,
-        product1: productsSubmitDetail[0],
+        totalPrice: `${totalPrice} VNĐ`,
+        product1: "chao ae nhe",
       }
+
+      console.log(qs.stringify(submitData))
 
       fetch("/", {
         method: "POST",
