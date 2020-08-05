@@ -74,6 +74,7 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
       address: "",
       district: "",
       city: "",
+      yoyoyo: "",
     },
     validateOnChange: false,
     validateOnBlur: false,
@@ -82,6 +83,7 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
       const submitData = {
         ...values,
         totalPrice: totalPrice,
+        product1: productsSubmitDetail[0],
       }
 
       fetch("/", {
