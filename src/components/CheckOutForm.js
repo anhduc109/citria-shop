@@ -1,5 +1,5 @@
 import React from "react"
-import { useFormik } from "formik"
+import { Formik, useFormik } from "formik"
 import { useSelector } from "react-redux"
 
 const CheckOutForm = ({ totalPrice }) => {
@@ -63,16 +63,22 @@ const CheckOutForm = ({ totalPrice }) => {
       district: "",
       city: "",
     },
+    validateOnChange: false,
+    validateOnBlur: false,
     validate,
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
+      console.log(values)
     },
   })
 
   return (
     <div className="row">
       <div className="check-out-information col-md-7 col-sm-12 col-12">
-        <form name="check-out-form" data-netlify="true" method="POST">
+        <form
+          name="check-out-form"
+          data-netlify="true"
+          onSubmit={formik.handleSubmit}
+        >
           <input type="hidden" name="form-name" value="check-out-form" />
           <h5>MY INFORMATION</h5>
           <div className="check-out-section-wrapper">
@@ -232,7 +238,6 @@ const CheckOutForm = ({ totalPrice }) => {
               </div>
             </div>
           </div>
-          {console.log(formik.values)}
           {/* {cart.map((item, index) => (
             <input
               key={item.id}
