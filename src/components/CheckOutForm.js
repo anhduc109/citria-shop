@@ -79,12 +79,14 @@ const CheckOutForm = ({ totalPrice, productsInput }) => {
     validateOnChange: false,
     validateOnBlur: false,
     validate,
-    onSubmit: (values, event) => {
+    onSubmit: values => {
       const submitData = {
         ...values,
         totalPrice: `${totalPrice} VNĐ`,
         product1: "chao ae nhe",
       }
+
+      console.log(qs.stringify(submitData))
 
       fetch("/", {
         method: "POST",
