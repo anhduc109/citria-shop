@@ -6,7 +6,7 @@ import PlusIcon from "../images/plus-icon.svg"
 import MinusIcon from "../images/minus-icon.svg"
 import CartProductDetail from "../components/CartProductDetail"
 
-const CheckOutSummarize = () => {
+const CheckOutSummarize = ({ totalPrice }) => {
   const [isOpened, setIsOpened] = useState(false)
   const cart = useSelector(state => state.product.cart)
 
@@ -14,6 +14,10 @@ const CheckOutSummarize = () => {
     <>
       <h5>YOUR ORDER</h5>
       <div className="check-out-section-wrapper">
+        <div className="order-total-price-wrapper">
+          <h6 className="order-total-price">PRICE</h6>
+          <h6 className="order-total-price">{totalPrice} VNĐ</h6>
+        </div>
         <div
           className="check-out-order-btn"
           onClick={() => setIsOpened(!isOpened)}

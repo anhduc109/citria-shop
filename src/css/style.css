@@ -1676,7 +1676,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .check-out-page h5 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .check-out-section-wrapper {
@@ -1710,6 +1710,18 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .order-view-title {
   margin-bottom: 0;
+}
+
+.order-total-price-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.order-total-price {
+  font-weight: 600;
 }
 
 .order-product-wrapper {

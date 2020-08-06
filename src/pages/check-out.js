@@ -40,7 +40,7 @@ const CheckOutPage = () => {
               />
             </div>
             <div className="check-out-summary col-md-5 col-sm-12 col-12">
-              <CheckOutSummarize />
+              <CheckOutSummarize totalPrice={totalPrice} />
             </div>
           </div>
         </div>
