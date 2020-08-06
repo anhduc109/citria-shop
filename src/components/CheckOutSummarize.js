@@ -35,12 +35,13 @@ const CheckOutSummarize = () => {
             "display-none"} container`}
         >
           {cart.map(item => (
-            <div key={item.id} className="row">
-              <img className="col-4" src={item.img.src} />
-              <div className="col-8">
-                <p>{item.name}</p>
-                <p>{item.price} VNĐ</p>
+            <div key={item.id} className="row order-product-wrapper">
+              <Img className="col-md-3 col-sm-4 col-4" sizes={item.img} />
+              <div className="col-md-9 col-sm-8 col-4">
+                <div className="order-details-name">{item.name}</div>
+                <div className="order-details-price">{item.price} VNĐ</div>
                 <p>Size: {item.size}</p>
+                <p>Quantity: {item.quantity}</p>
               </div>
             </div>
           ))}

@@ -1691,6 +1691,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #ef3d56;
 }
 
+.check-out-summary {
+  padding: 0 30px;
+}
+
 .check-out-order-btn {
   cursor: pointer;
   display: flex;
@@ -1708,6 +1712,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-bottom: 0;
 }
 
+.order-product-wrapper {
+  padding: 10px 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.order-details-name {
+  font-weight: 600;
+}
+
+.order-details-price {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
 .display-none {
   display: none;
 }
@@ -1720,6 +1738,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 @media (min-width: 1800px) {
   .container {
     max-width: 1680px;
+  }
+}
+
+@media (max-width: 767px) {
+  .check-out-summary {
+    padding: 0 15px;
   }
 }
 
