@@ -7,15 +7,15 @@ import MinusIcon from "../images/minus-icon.svg"
 import CartProductDetail from "../components/CartProductDetail"
 
 const CheckOutSummarize = ({ totalPrice }) => {
-  const [isOpened, setIsOpened] = useState(false)
   const cart = useSelector(state => state.product.cart)
+  const [isOpened, setIsOpened] = useState(cart.length <= 3)
 
   return (
     <>
       <h5>YOUR ORDER</h5>
       <div className="check-out-section-wrapper">
         <div className="order-total-price-wrapper">
-          <h6 className="order-total-price">PRICE</h6>
+          <h6 className="order-total-price">TOTAL PRICE</h6>
           <h6 className="order-total-price">{totalPrice} VNĐ</h6>
         </div>
         <div
