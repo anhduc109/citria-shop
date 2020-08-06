@@ -1691,6 +1691,27 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #ef3d56;
 }
 
+.check-out-order-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.order-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.order-view-title {
+  margin-bottom: 0;
+}
+
+.display-none {
+  display: none;
+}
+
 /* About Page */
 .about-page {
   margin: 120px 0px;

@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CheckOutForm from "../components/CheckOutForm"
+import CheckOutSummarize from "../components/CheckOutSummarize"
 
 const CheckOutPage = () => {
   const [totalPrice, setTotalPrice] = useState(0)
@@ -31,7 +32,17 @@ const CheckOutPage = () => {
       <SEO title="Check Out" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
       <div className="check-out-page">
         <div className="container">
-          <CheckOutForm totalPrice={totalPrice} productsInfo={productsInfo} />
+          <div className="row">
+            <div className="check-out-information col-md-7 col-sm-12 col-12">
+              <CheckOutForm
+                totalPrice={totalPrice}
+                productsInfo={productsInfo}
+              />
+            </div>
+            <div className="check-out-summary col-md-5 col-sm-12 col-12">
+              <CheckOutSummarize />
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
