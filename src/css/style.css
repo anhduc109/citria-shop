@@ -1668,6 +1668,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .remove-logo {
   width: 20px;
+  position: absolute;
+  right: 15px;
   cursor: pointer;
 }
 
@@ -1802,5 +1804,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   .check-out-page {
     margin: 80px 0;
+  }
+
+  .remove-logo {
+    width: 16px;
+    height: 16px;
+  }
+
+  .order-icon {
+    width: 16px;
+    height: 16px;
   }
 }
