@@ -56,7 +56,7 @@ const CartProductDetail = ({ item }) => {
           <option value={20}>20</option>
         </select>
       </div>
-      <div className="col-md-2 col-sm-2 col-2">
+      <div className="col cart-remove-product">
         <img
           className="remove-logo"
           src={XIcon}

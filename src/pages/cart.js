@@ -26,27 +26,31 @@ const CartPage = () => {
           <h3>Shopping Cart</h3>
           <div className="row">
             <div className="cart-items-detail col-md-7">
-              {cart.map(item => (
-                <CartProductDetail key={item.id} item={item} />
-              ))}
+              <div className="container">
+                {cart.map(item => (
+                  <CartProductDetail key={item.id} item={item} />
+                ))}
+              </div>
             </div>
             <div className="cart-total col-md-5">
-              <h4>Total Price</h4>
-              <h5>{totalPrice} VNĐ</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </p>
-              <br />
-              <AnimateLink
-                path="/check-out"
-                content={
-                  <button className="add-to-cart-btn">
-                    Continue to checkout
-                  </button>
-                }
-              />
+              <div className="container">
+                <h4>Total Price</h4>
+                <h5>{totalPrice} VNĐ</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+                <br />
+                <AnimateLink
+                  path="/check-out"
+                  content={
+                    <button className="add-to-cart-btn">
+                      Continue to checkout
+                    </button>
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>

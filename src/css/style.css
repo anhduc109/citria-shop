@@ -1667,7 +1667,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .remove-logo {
+  width: 20px;
   cursor: pointer;
+}
+
+.cart-remove-product {
+  text-align: right;
 }
 
 /* Check Out Page */
