@@ -1703,6 +1703,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-bottom: 0.5rem;
 }
 
+.check-out-order-details-wrapper {
+  margin-bottom: 0.5rem;
+}
+
 .order-icon {
   width: 20px;
   height: 20px;

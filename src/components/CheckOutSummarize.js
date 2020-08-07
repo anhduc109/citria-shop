@@ -4,11 +4,10 @@ import { useSelector } from "react-redux"
 
 import PlusIcon from "../images/plus-icon.svg"
 import MinusIcon from "../images/minus-icon.svg"
-import CartProductDetail from "../components/CartProductDetail"
 
 const CheckOutSummarize = ({ totalPrice }) => {
   const cart = useSelector(state => state.product.cart)
-  const [isOpened, setIsOpened] = useState(cart.length <= 3)
+  const [isOpened, setIsOpened] = useState(cart.length <= 2)
 
   return (
     <>
@@ -50,6 +49,15 @@ const CheckOutSummarize = ({ totalPrice }) => {
             </div>
           ))}
         </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam.
+        </p>
       </div>
     </>
   )
