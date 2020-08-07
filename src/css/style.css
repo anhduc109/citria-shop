@@ -1708,6 +1708,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .check-out-order-details-wrapper {

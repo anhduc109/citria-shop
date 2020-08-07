@@ -39,7 +39,7 @@ const CheckOutPage = () => {
                 productsInfo={productsInfo}
               />
             </div>
-            <div className="check-out-summary col-md-5 col-sm-12 col-12">
+            <div className="check-out-summary col-md-5 col-sm-12 col-12 order-first order-md-last">
               <CheckOutSummarize totalPrice={totalPrice} />
             </div>
           </div>
