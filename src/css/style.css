@@ -1764,6 +1764,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 120px 0;
 }
 
+.thank-you-content {
+  padding: 30px 0;
+}
+
 /* About Page */
 .about-page {
   margin: 120px 0px;
