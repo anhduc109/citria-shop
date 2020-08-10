@@ -3,6 +3,7 @@ import {
   ADD_PRODUCT_TO_CART,
   CHANGE_QUANTITY_OF_CART_PRODUCT,
   REMOVE_PRODUCT_FROM_CART,
+  REMOVE_ALL_FROM_CART,
 } from "../type"
 
 export function addProductToCart(product) {
@@ -29,6 +30,12 @@ export function removeProductFromCart(product) {
     payload: {
       product,
     },
+  }
+}
+
+export function removeAllFromCart() {
+  return {
+    type: REMOVE_ALL_FROM_CART,
   }
 }
 

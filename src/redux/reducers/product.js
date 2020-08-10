@@ -3,6 +3,7 @@ import {
   ADD_PRODUCT_TO_CART,
   CHANGE_QUANTITY_OF_CART_PRODUCT,
   REMOVE_PRODUCT_FROM_CART,
+  REMOVE_ALL_FROM_CART,
 } from "../type"
 
 export default function product(
@@ -63,6 +64,13 @@ export default function product(
       return {
         ...state,
         cart: state.cart.filter(item => item.id !== product.id),
+      }
+    }
+
+    case REMOVE_ALL_FROM_CART: {
+      return {
+        ...state,
+        cart: [],
       }
     }
 

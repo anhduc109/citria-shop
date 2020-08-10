@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 import { useFormik } from "formik"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import qs from "qs"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+import { removeAllFromCart } from "../redux/actions"
 
 const CheckOutForm = ({ totalPrice, productsInfo }) => {
   const cart = useSelector(state => state.product.cart)
   const [nextPath, setNextPath] = useState()
+  const dispatch = useDispatch()
 
   let productsSubmitDetail = []
   cart.map(item => {
@@ -92,8 +94,11 @@ const CheckOutForm = ({ totalPrice, productsInfo }) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: qs.stringify(submitData),
       })
-        .then(() => window.location.replace("/thank-you"))
-        .catch(error => setNextPath("/store"))
+        .then(() => {
+          window.location.replace("/thank-you")
+          dispatch(removeAllFromCart())
+        })
+        .catch(error => window.location.replace("/sorry"))
     },
   })
 
