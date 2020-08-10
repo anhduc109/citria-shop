@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react"
-import { useSelector } from "react-redux"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CheckOutForm from "../components/CheckOutForm"
-import CheckOutSummarize from "../components/CheckOutSummarize"
 
 const ThankYouPage = () => {
   return (
@@ -19,8 +16,6 @@ const ThankYouPage = () => {
             mean time, explore the latest fashion collection and get inspired by
             new trends at Collection
           </h6>
-          <br />
-          <h4>Order Details</h4>
         </div>
       </div>
     </Layout>
