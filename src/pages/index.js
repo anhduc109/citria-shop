@@ -65,21 +65,6 @@ export const query = graphql`
         }
       }
     }
-    contentfulDealCountDown {
-      title
-      featureImage {
-        fluid(maxWidth: 1800) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-        }
-      }
-      date(formatString: "D MMMM, YYYY")
-    }
     allContentfulBlogs(limit: 3, sort: { fields: createdAt, order: DESC }) {
       edges {
         node {
