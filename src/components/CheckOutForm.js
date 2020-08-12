@@ -9,6 +9,7 @@ import { removeAllFromCart } from "../redux/actions"
 const CheckOutForm = ({ totalPrice, productsInfo }) => {
   const cart = useSelector(state => state.product.cart)
   const [nextPath, setNextPath] = useState()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const dispatch = useDispatch()
 
   let productsSubmitDetail = []
@@ -96,6 +97,7 @@ const CheckOutForm = ({ totalPrice, productsInfo }) => {
         body: qs.stringify(submitData),
       })
         .then(() => {
+          setIsSubmitting(true)
           navigate("/thank-you")
           dispatch(removeAllFromCart())
         })
@@ -286,22 +288,13 @@ const CheckOutForm = ({ totalPrice, productsInfo }) => {
         </div>
         <div className="row">
           <div className="col-md-6 col-sm-6 col-6">
-            {/* <AniLink
-              className="animate-link"
-              cover
-              bg="black"
-              duration={1}
-              to={nextPath}
-              productsSubmitDetail={productsSubmitDetail}
-            > */}
             <button
               type="submit"
               className="add-to-cart-btn"
               disabled={cart.length <= 0}
             >
-              Submit
+              {!isSubmitting ? "Submit" : "Submitting..."}
             </button>
-            {/* </AniLink> */}
           </div>
         </div>
       </form>

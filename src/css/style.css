@@ -1634,6 +1634,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: rgb(29, 29, 29);
 }
 
+.add-to-cart-btn:disabled {
+  background-color: #dad8d8;
+}
+
+.add-to-cart-btn:disabled:hover {
+  background-color: #dad8d8;
+}
+
 .product-detail-text {
   margin-bottom: 0.5rem;
 }
