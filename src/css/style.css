@@ -1630,6 +1630,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   outline: black;
 }
 
+.add-to-cart-btn:hover {
+  background-color: rgb(29, 29, 29);
+}
+
 .product-detail-text {
   margin-bottom: 0.5rem;
 }

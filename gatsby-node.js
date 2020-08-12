@@ -8,9 +8,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     resolve(
       graphql(`
         {
-          allContentfulProduct{
-            edges{
-              node{
+          allContentfulProduct {
+            edges {
+              node {
                 id
                 slug
               }
@@ -31,22 +31,22 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
         result.data.allContentfulProduct.edges.forEach(edge => {
           createPage({
-            path: edge.node.slug,
+            path: `store/${edge.node.slug}`,
             component: StoreTemplate,
             context: {
               slug: edge.node.slug,
             },
           })
-        });
+        })
         result.data.allContentfulBlogs.edges.forEach(data => {
           createPage({
             path: data.node.slug,
             component: BlogTemplate,
             context: {
-              slug: data.node.slug
-            }
-          });
-        });
+              slug: data.node.slug,
+            },
+          })
+        })
         return
       })
     )

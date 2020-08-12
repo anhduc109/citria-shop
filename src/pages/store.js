@@ -57,7 +57,7 @@ class IndexPost extends React.Component {
 
                   <div className="details_inner">
                     <AnimateLink
-                      path={`/${items.node.slug}`}
+                      path={`/store/${items.node.slug}`}
                       content={<h5>{items.node.name}</h5>}
                     />
                     <div className="row">

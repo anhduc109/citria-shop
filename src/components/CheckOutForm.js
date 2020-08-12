@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "gatsby"
 import { useFormik } from "formik"
 import { useSelector, useDispatch } from "react-redux"
 import qs from "qs"
@@ -95,10 +96,10 @@ const CheckOutForm = ({ totalPrice, productsInfo }) => {
         body: qs.stringify(submitData),
       })
         .then(() => {
-          window.location.replace("/thank-you")
+          navigate("/thank-you")
           dispatch(removeAllFromCart())
         })
-        .catch(error => window.location.replace("/sorry"))
+        .catch(error => navigate("/sorry"))
     },
   })
 

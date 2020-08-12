@@ -25,7 +25,10 @@ const CartProductDetail = ({ item }) => {
     <div key={item.id} className="row cart-item-detail">
       <Img fixed={item.img} className="col-md-3 col-sm-4 col-3" />
       <div className="col-md-7 col-sm-6 col-7">
-        <AnimateLink path={`/${item.slug}`} content={<h6>{item.name}</h6>} />
+        <AnimateLink
+          path={`/store/${item.slug}`}
+          content={<h6>{item.name}</h6>}
+        />
         <p>{item.price} VNĐ</p>
         <p>Size: {item.size}</p>
         <select
