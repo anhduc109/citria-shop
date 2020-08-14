@@ -59,50 +59,53 @@ const ProductDetails = data => {
         title={data.data.contentfulProduct.name}
         keywords={[`gatsby`, `application`, `react`]}
       />
-      <div className="container details-page">
-        <div className="row product-details">
-          <div className="product-gallery col-sm-12 col-md-8">
-            <ImageGallery
-              items={imagesGallery}
-              thumbnailPosition="left"
-              showPlayButton={false}
-            />
-          </div>
-          <div className="product-description col-sm-12 col-md-4">
-            <h3 className="product-title">
-              {data.data.contentfulProduct.name}
-            </h3>
-            <h4 className="product-price">
-              {data.data.contentfulProduct.price} VNĐ
-            </h4>
-            <div
-              className="product-detail-text"
-              dangerouslySetInnerHTML={{
-                __html:
-                  data.data.contentfulProduct.details.childMarkdownRemark.html,
-              }}
-            />
-            <select
-              class="form-control product-size-select"
-              value={size}
-              onChange={handleChangeSize}
-            >
-              <option value={""}>Select size</option>
-              <option value={"S"}>S</option>
-              <option value={"M"}>M</option>
-              <option value={"L"}>L</option>
-            </select>
-            <AnimateLink
-              path="/cart"
-              content={
-                <button className="add-to-cart-btn" onClick={handleAddToCart}>
-                  Add to cart
-                </button>
-              }
-              disabled={size === ""}
-            ></AnimateLink>
-            <div hidden={!isSizeAlertOn} className="product-size-alert">
-              <p>You need to choose the size first</p>
+      <div className="container">
+        <div className="details-page">
+          <div className="row product-details">
+            <div className="product-gallery col-sm-12 col-md-8">
+              <ImageGallery
+                items={imagesGallery}
+                thumbnailPosition="left"
+                showPlayButton={false}
+              />
+            </div>
+            <div className="product-description col-sm-12 col-md-4">
+              <h3 className="product-title">
+                {data.data.contentfulProduct.name}
+              </h3>
+              <h4 className="product-price">
+                {data.data.contentfulProduct.price} VNĐ
+              </h4>
+              <div
+                className="product-detail-text"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.data.contentfulProduct.details.childMarkdownRemark
+                      .html,
+                }}
+              />
+              <select
+                class="form-control product-size-select"
+                value={size}
+                onChange={handleChangeSize}
+              >
+                <option value={""}>Select size</option>
+                <option value={"S"}>S</option>
+                <option value={"M"}>M</option>
+                <option value={"L"}>L</option>
+              </select>
+              <AnimateLink
+                path="/cart"
+                content={
+                  <button className="add-to-cart-btn" onClick={handleAddToCart}>
+                    Add to cart
+                  </button>
+                }
+                disabled={size === ""}
+              ></AnimateLink>
+              <div hidden={!isSizeAlertOn} className="product-size-alert">
+                <p>You need to choose the size first</p>
+              </div>
             </div>
           </div>
         </div>

@@ -935,10 +935,10 @@ span.price {
 .site-Banner .Banner-details > div {
   max-width: 70%;
 }
-.store-page .product-main {
+.store-page {
   margin: 120px 0px;
 }
-.details-page .product-details {
+.details-page {
   margin: 120px 0px;
 }
 .not-found-page {
@@ -1836,11 +1836,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
     width: 30px !important;
   }
 
-  .store-page .product-main {
+  .store-page {
     margin: 80px 0;
   }
 
-  .details-page .product-details {
+  .details-page {
     margin: 80px 0;
   }
 
