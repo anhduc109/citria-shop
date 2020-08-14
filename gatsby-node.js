@@ -4,7 +4,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
     const StoreTemplate = path.resolve("src/templates/details.js")
-    const BlogTemplate = path.resolve("src/templates/blogDetails.js")
+    const CollectionTemplate = path.resolve(
+      "src/templates/collectionDetails.js"
+    )
     resolve(
       graphql(`
         {
@@ -40,8 +42,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
         result.data.allContentfulBlogs.edges.forEach(data => {
           createPage({
-            path: data.node.slug,
-            component: BlogTemplate,
+            path: `collections/${data.node.slug}`,
+            component: CollectionTemplate,
             context: {
               slug: data.node.slug,
             },

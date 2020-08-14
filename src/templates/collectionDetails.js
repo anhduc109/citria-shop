@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 
 const disqusShortname = "shopper"
 
-const BlogDetails = data => (
+const CollectionDetails = data => (
   <Layout>
     <SEO
       title={data.data.contentfulBlogs.title}
@@ -47,7 +47,7 @@ const BlogDetails = data => (
   </Layout>
 )
 
-export default BlogDetails
+export default CollectionDetails
 
 export const query = graphql`
   query BlogDetailsQuery($slug: String!) {
