@@ -78,8 +78,10 @@ class IndexPost extends React.Component {
 const IndexPage = data => (
   <Layout>
     <SEO title="Store" keywords={[`gatsby`, `store`, `react`]} />
-    <div className="container store-page">
-      <IndexPost data={data}></IndexPost>
+    <div className="container">
+      <div className="store-page">
+        <IndexPost data={data}></IndexPost>
+      </div>
     </div>
   </Layout>
 )

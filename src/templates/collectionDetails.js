@@ -1,11 +1,8 @@
 import React from "react"
 import Img from "gatsby-image"
-import { DiscussionEmbed } from "disqus-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-
-const disqusShortname = "shopper"
 
 const CollectionDetails = data => (
   <Layout>
