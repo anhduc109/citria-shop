@@ -10,38 +10,31 @@ const disqusShortname = "shopper"
 const CollectionDetails = data => (
   <Layout>
     <SEO
-      title={data.data.contentfulBlogs.title}
+      title={data.data.contentfulCollection.title}
       keywords={[`gatsby`, `ecommerce`, `react`, `contentFul`, `Snipcart`]}
     />
-    <div className="blogs-page">
-      <div className="post-thumbnail">
-        <Img sizes={data.data.contentfulBlogs.featureImage.fluid} />
-      </div>
-      <div className="container">
-        <div className="post-details">
-          <h2 className="title">{data.data.contentfulBlogs.title}</h2>
-          <div className="post-date">
-            <i className="fas fa-calendar-alt"></i>
-            {data.data.contentfulBlogs.publicData}
-          </div>
-          {/* <div className="author">
-                        <Img sizes={data.data.contentfulBlogs.author.photo.fixed} />
-                        <strong className="name">{data.data.contentfulBlogs.author.name}</strong>
-                    </div> */}
-          <div
+    {/* <div className="post-thumbnail">
+        <Img sizes={data.data.contentfulCollection.featureImage.fluid} />
+      </div> */}
+    <div className="container">
+      <div className="collection-detail-page">
+        <h3>{data.data.contentfulCollection.title}</h3>
+        <div className="collection-detail-description">
+          <p
             dangerouslySetInnerHTML={{
               __html:
-                data.data.contentfulBlogs.description.childMarkdownRemark.html,
+                data.data.contentfulCollection.description.childMarkdownRemark
+                  .html,
             }}
           />
         </div>
-        <DiscussionEmbed
-          shortname={disqusShortname}
-          config={{
-            identifier: data.data.contentfulBlogs.id,
-            title: data.data.contentfulBlogs.title,
-          }}
+        <Img
+          className="collection-detail-image"
+          sizes={data.data.contentfulCollection.featureImage.fluid}
         />
+        {data.data.contentfulCollection.moreImages.map(item => (
+          <Img className="collection-detail-image" sizes={item.fluid} />
+        ))}
       </div>
     </div>
   </Layout>
@@ -51,18 +44,29 @@ export default CollectionDetails
 
 export const query = graphql`
   query BlogDetailsQuery($slug: String!) {
-    contentfulBlogs(slug: { eq: $slug }) {
+    contentfulCollection(slug: { eq: $slug }) {
       id
       title
       slug
-      publicData(formatString: "MMMM D, YYYY")
       description {
         childMarkdownRemark {
           html
-          excerpt(pruneLength: 250)
         }
       }
       featureImage {
+        id
+        fluid {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+        }
+      }
+      moreImages {
+        id
         fluid {
           base64
           aspectRatio

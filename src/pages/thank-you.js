@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import AnimateLink from "../components/AnimateLink"
 
 const ThankYouPage = () => {
   return (
@@ -15,7 +16,13 @@ const ThankYouPage = () => {
               We are getting started on your order right away, and you will
               receive an order confirmation call from our Customer Service. In
               the mean time, explore the latest fashion collection and get
-              inspired by new trends at Collection
+              inspired by new trends at{" "}
+              <span>
+                <AnimateLink
+                  path="/collections"
+                  content="Collections"
+                ></AnimateLink>
+              </span>
             </h6>
           </div>
         </div>

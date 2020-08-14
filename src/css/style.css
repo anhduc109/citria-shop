@@ -1635,6 +1635,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .add-to-cart-btn:hover {
   background-color: rgb(29, 29, 29);
+  transition: 0.3s ease;
 }
 
 .add-to-cart-btn:disabled {
@@ -1643,6 +1644,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .add-to-cart-btn:disabled:hover {
   background-color: #dad8d8;
+  transition: 0.3s ease;
 }
 
 .product-detail-text {
@@ -1788,6 +1790,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 120px 0px;
 }
 
+/* Collection Detail Page */
+.collection-detail-page {
+  margin: 120px 0px;
+}
+
+.collection-detail-description {
+  padding: 15px 0;
+}
+
+.collection-detail-image {
+  margin-bottom: 15px;
+}
+
 /* About Page */
 .about-page {
   margin: 120px 0px;
@@ -1850,6 +1865,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .collections-page {
+    margin: 80px 0;
+  }
+
+  .collection-detail-page {
     margin: 80px 0;
   }
 

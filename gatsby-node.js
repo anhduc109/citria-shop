@@ -18,7 +18,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
             }
           }
-          allContentfulBlogs {
+          allContentfulCollection {
             edges {
               node {
                 id
@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           })
         })
-        result.data.allContentfulBlogs.edges.forEach(data => {
+        result.data.allContentfulCollection.edges.forEach(data => {
           createPage({
             path: `collections/${data.node.slug}`,
             component: CollectionTemplate,

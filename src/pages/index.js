@@ -52,27 +52,7 @@ export const query = graphql`
           title
           subHeading
           image {
-            fluid(maxWidth: 1800, quality: 80) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
-          }
-        }
-      }
-    }
-    allContentfulBlogs(limit: 3, sort: { fields: createdAt, order: DESC }) {
-      edges {
-        node {
-          id
-          title
-          slug
-          featureImage {
-            fluid(maxWidth: 1120) {
+            fluid {
               base64
               aspectRatio
               src
