@@ -19,15 +19,14 @@ const CollectionDetails = data => (
     <div className="container">
       <div className="collection-detail-page">
         <h3>{data.data.contentfulCollection.title}</h3>
-        <div className="collection-detail-description">
-          <p
-            dangerouslySetInnerHTML={{
-              __html:
-                data.data.contentfulCollection.description.childMarkdownRemark
-                  .html,
-            }}
-          />
-        </div>
+        <div
+          className="collection-detail-description"
+          dangerouslySetInnerHTML={{
+            __html:
+              data.data.contentfulCollection.description.childMarkdownRemark
+                .html,
+          }}
+        ></div>
         <Img
           className="collection-detail-image"
           sizes={data.data.contentfulCollection.featureImage.fluid}
