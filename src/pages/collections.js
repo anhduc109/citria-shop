@@ -16,4 +16,35 @@ const CollectionsPage = () => {
   )
 }
 
+// export const query = graphql`
+//   query BlogsQuery {
+//     allContentfulBlogs {
+//       edges {
+//         node {
+//           id
+//           title
+//           slug
+//           publicData(formatString: "MMMM D, YYYY")
+//           description {
+//             childMarkdownRemark {
+//               excerpt(pruneLength: 250)
+//             }
+//           }
+//           featureImage {
+//             fluid(maxWidth: 1120) {
+//               base64
+//               aspectRatio
+//               src
+//               srcSet
+//               srcWebp
+//               srcSetWebp
+//               sizes
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
 export default CollectionsPage
