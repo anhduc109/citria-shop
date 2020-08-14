@@ -69,6 +69,17 @@ const Header = () => {
                     cover
                     bg="black"
                     duration={1}
+                    to="/collections"
+                  >
+                    Collections
+                  </AniLink>
+                </li>
+                <li className="nav-item">
+                  <AniLink
+                    className="nav-link"
+                    cover
+                    bg="black"
+                    duration={1}
                     to="/about"
                   >
                     About

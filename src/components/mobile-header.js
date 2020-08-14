@@ -30,6 +30,15 @@ const MobileHeader = () => {
           cover
           bg="black"
           duration={1}
+          to="/collections"
+        >
+          <h4>Collections</h4>
+        </AniLink>
+        <AniLink
+          className="menu-item"
+          cover
+          bg="black"
+          duration={1}
           to="/about"
         >
           <h4>About</h4>
