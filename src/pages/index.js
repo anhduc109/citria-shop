@@ -52,7 +52,7 @@ export const query = graphql`
           title
           subHeading
           image {
-            fluid {
+            fluid(maxWidth: 1000, quality: 100) {
               base64
               aspectRatio
               src
