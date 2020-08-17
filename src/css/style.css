@@ -662,7 +662,8 @@ pre tt:after {
 header.site-header-home {
   position: absolute;
   width: 100%;
-  background: transparent;
+  /* background: transparent; */
+  background: linear-gradient(rgb(171 171 171), rgba(0, 0, 0, 0));
   z-index: 9;
   padding: 20px 0;
   transition-delay: 500ms;
@@ -1444,7 +1445,8 @@ code {
 .mobile-header-home {
   position: absolute;
   z-index: 10;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background: linear-gradient(rgb(171 171 171), rgba(0, 0, 0, 0));
   height: 60px;
   width: 100%;
   transition-delay: 500ms;
