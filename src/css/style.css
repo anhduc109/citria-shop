@@ -874,10 +874,7 @@ span.price {
 .slick-dots li.slick-active button {
   background: red;
 }
-.slick-list {
-  overflow: hidden;
-  margin-bottom: 30px;
-}
+
 .site-Banner {
   height: 100vh;
   width: 100%;
@@ -936,13 +933,13 @@ span.price {
   max-width: 70%;
 }
 .store-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 .details-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 .not-found-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 .with-underline {
   position: relative;
@@ -1664,7 +1661,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Cart Page */
 .cart-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 
 .cart-item-detail {
@@ -1696,7 +1693,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Check Out Page */
 .check-out-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 
 .check-out-page h5 {
@@ -1778,7 +1775,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Thank You Page */
 .thank-you-page {
-  margin: 120px 0;
+  margin: 120px 0 60px;
 }
 
 .thank-you-content {
@@ -1787,12 +1784,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Collections Page */
 .collections-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 
 /* Collection Detail Page */
 .collection-detail-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 
 .collection-detail-description {
@@ -1805,7 +1802,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* About Page */
 .about-page {
-  margin: 120px 0px;
+  margin: 120px 0px 60px;
 }
 
 @media (min-width: 1800px) {
@@ -1837,39 +1834,39 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .store-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .details-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .about-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .cart-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .check-out-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .thank-you-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .not-found-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .collections-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .collection-detail-page {
-    margin: 80px 0;
+    margin: 80px 0 30px;
   }
 
   .remove-logo {
