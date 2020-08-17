@@ -28,7 +28,10 @@ class Footer extends Component {
             <div className="footer-bottom social-right-menu ">
               <div className="site-info">
                 <div>
-                  <a href="google.com" target="_blank">
+                  <a
+                    href="https://www.facebook.com/citriavietnam"
+                    target="_blank"
+                  >
                     <img
                       className="footer-facebook"
                       src={FacebookLogo}
