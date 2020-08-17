@@ -25,7 +25,6 @@ export const query = graphql`
           id
           name
           slug
-          rating
           image {
             fluid(maxWidth: 1000) {
               base64

@@ -146,7 +146,6 @@ export const query = graphql`
           srcSetWebp
         }
       }
-      rating
     }
   }
 `
