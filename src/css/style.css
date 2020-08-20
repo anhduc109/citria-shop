@@ -1795,9 +1795,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 15px 0;
 }
 
-.collection-detail-image {
+/* .collection-detail-image {
   margin-bottom: 15px;
-}
+} */
 
 /* About Page */
 .about-page {
