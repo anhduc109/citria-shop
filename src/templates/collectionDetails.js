@@ -12,7 +12,9 @@ const CollectionDetails = data => (
     />
     <div className="collection-detail-page">
       <div className="container">
-        <h3>{data.data.contentfulCollection.title}</h3>
+        <div className="collection-detail-title">
+          <h3>{data.data.contentfulCollection.title}</h3>
+        </div>
         {/* <div
           className="collection-detail-description"
           dangerouslySetInnerHTML={{
@@ -24,7 +26,7 @@ const CollectionDetails = data => (
       </div>
       <div className="row">
         <Img
-          className="collection-detail-image col-12 col-sm-6 col-md-6"
+          className="collection-detail-image col-12"
           sizes={data.data.contentfulCollection.featureImage.fluid}
         />
         {data.data.contentfulCollection.moreImages.map(item => (
