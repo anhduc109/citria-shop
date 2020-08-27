@@ -18,7 +18,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/"
         >
           <h4>Home</h4>
@@ -28,7 +28,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/store"
         >
           <h4>Store</h4>
@@ -38,7 +38,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/collections"
         >
           <h4>Collections</h4>
@@ -48,7 +48,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/about"
         >
           <h4>About</h4>
@@ -58,7 +58,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/contact-us"
         >
           <h4>Contact</h4>
@@ -70,7 +70,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/"
         >
           <img
@@ -86,7 +86,7 @@ const MobileHeader = () => {
           swipe
           direction="left"
           bg="black"
-          duration={0.5}
+          duration={0.3}
           to="/cart"
         >
           <img

@@ -9,7 +9,7 @@ const AnimateLink = ({ path, content, color, disabled }) =>
       swipe
       direction="left"
       bg="white"
-      duration={0.5}
+      duration={0.3}
       to={path}
     >
       {content}

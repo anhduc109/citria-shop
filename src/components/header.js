@@ -22,7 +22,7 @@ const Header = () => {
               swipe
               direction="left"
               bg="black"
-              duration={0.5}
+              duration={0.3}
               to="/"
             >
               <img className="citria-logo" src={CitriaLogo} alt="Citria logo" />
@@ -37,7 +37,7 @@ const Header = () => {
                     swipe
                     direction="left"
                     bg="black"
-                    duration={0.5}
+                    duration={0.3}
                     to="/"
                   >
                     Home
@@ -60,7 +60,7 @@ const Header = () => {
                     swipe
                     direction="left"
                     bg="black"
-                    duration={0.5}
+                    duration={0.3}
                     to="/store"
                   >
                     Store
@@ -72,7 +72,7 @@ const Header = () => {
                     swipe
                     direction="left"
                     bg="black"
-                    duration={0.5}
+                    duration={0.3}
                     to="/collections"
                   >
                     Collections
@@ -84,7 +84,7 @@ const Header = () => {
                     swipe
                     direction="left"
                     bg="black"
-                    duration={0.5}
+                    duration={0.3}
                     to="/about"
                   >
                     About
@@ -96,7 +96,7 @@ const Header = () => {
                     swipe
                     direction="left"
                     bg="black"
-                    duration={0.5}
+                    duration={0.3}
                     to="/contact-us"
                   >
                     Contact
@@ -107,7 +107,7 @@ const Header = () => {
                     swipe
                     direction="left"
                     bg="black"
-                    duration={0.5}
+                    duration={0.3}
                     to="/cart"
                   >
                     <img
