@@ -13,48 +13,66 @@ const MobileHeader = () => {
   return (
     <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
       <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
-        <AniLink className="menu-item" cover bg="black" duration={1} to="/">
+        <AniLink
+          className="menu-item"
+          swipe
+          direction="left"
+          bg="black"
+          duration={0.5}
+          to="/"
+        >
           <h4>Home</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          cover
+          swipe
+          direction="left"
           bg="black"
-          duration={1}
+          duration={0.5}
           to="/store"
         >
           <h4>Store</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          cover
+          swipe
+          direction="left"
           bg="black"
-          duration={1}
+          duration={0.5}
           to="/collections"
         >
           <h4>Collections</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          cover
+          swipe
+          direction="left"
           bg="black"
-          duration={1}
+          duration={0.5}
           to="/about"
         >
           <h4>About</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          cover
+          swipe
+          direction="left"
           bg="black"
-          duration={1}
+          duration={0.5}
           to="/contact-us"
         >
           <h4>Contact</h4>
         </AniLink>
       </Menu>
       <div className="citria-logo-mobile-wrapper">
-        <AniLink className="animate-link" cover bg="black" duration={1} to="/">
+        <AniLink
+          className="animate-link"
+          swipe
+          direction="left"
+          bg="black"
+          duration={0.5}
+          to="/"
+        >
           <img
             className="citria-logo-mobile"
             src={CitriaLogo}
@@ -65,9 +83,10 @@ const MobileHeader = () => {
       <div className="shopping-cart-wrapper">
         <AniLink
           className="animate-link"
-          cover
+          swipe
+          direction="left"
           bg="black"
-          duration={1}
+          duration={0.5}
           to="/cart"
         >
           <img
