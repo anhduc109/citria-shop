@@ -13,52 +13,41 @@ const MobileHeader = () => {
   return (
     <div className={pathname === "/" ? "mobile-header-home" : "mobile-header"}>
       <Menu customBurgerIcon={<img src={menuIcon} alt="menu-icon" />}>
-        <AniLink
-          className="menu-item"
-          swipe
-          direction="left"
-          bg="black"
-          duration={0.3}
-          to="/"
-        >
+        <AniLink className="menu-item" cover bg="black" duration={0.5} to="/">
           <h4>Home</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          swipe
-          direction="left"
+          cover
           bg="black"
-          duration={0.3}
+          duration={0.5}
           to="/store"
         >
           <h4>Store</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          swipe
-          direction="left"
+          cover
           bg="black"
-          duration={0.3}
+          duration={0.5}
           to="/collections"
         >
           <h4>Collections</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          swipe
-          direction="left"
+          cover
           bg="black"
-          duration={0.3}
+          duration={0.5}
           to="/about"
         >
           <h4>About</h4>
         </AniLink>
         <AniLink
           className="menu-item"
-          swipe
-          direction="left"
+          cover
           bg="black"
-          duration={0.3}
+          duration={0.5}
           to="/contact-us"
         >
           <h4>Contact</h4>
@@ -67,10 +56,9 @@ const MobileHeader = () => {
       <div className="citria-logo-mobile-wrapper">
         <AniLink
           className="animate-link"
-          swipe
-          direction="left"
+          cover
           bg="black"
-          duration={0.3}
+          duration={0.5}
           to="/"
         >
           <img
@@ -83,10 +71,9 @@ const MobileHeader = () => {
       <div className="shopping-cart-wrapper">
         <AniLink
           className="animate-link"
-          swipe
-          direction="left"
+          cover
           bg="black"
-          duration={0.3}
+          duration={0.5}
           to="/cart"
         >
           <img

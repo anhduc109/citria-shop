@@ -6,10 +6,9 @@ const AnimateLink = ({ path, content, color, disabled }) =>
     <AniLink
       style={{ color }}
       className="animate-link"
-      swipe
-      direction="left"
-      bg="white"
-      duration={0.3}
+      cover
+      bg="black"
+      duration={0.5}
       to={path}
     >
       {content}

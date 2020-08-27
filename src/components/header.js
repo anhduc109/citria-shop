@@ -19,10 +19,9 @@ const Header = () => {
           <div className="col-sm-12 col-md-4 align-self-center">
             <AniLink
               className="header-logo"
-              swipe
-              direction="left"
+              cover
               bg="black"
-              duration={0.3}
+              duration={0.5}
               to="/"
             >
               <img className="citria-logo" src={CitriaLogo} alt="Citria logo" />
@@ -34,10 +33,9 @@ const Header = () => {
                 <li className="nav-item active">
                   <AniLink
                     className="nav-link"
-                    swipe
-                    direction="left"
+                    cover
                     bg="black"
-                    duration={0.3}
+                    duration={0.5}
                     to="/"
                   >
                     Home
@@ -57,10 +55,9 @@ const Header = () => {
                 <li className="nav-item">
                   <AniLink
                     className="nav-link"
-                    swipe
-                    direction="left"
+                    cover
                     bg="black"
-                    duration={0.3}
+                    duration={0.5}
                     to="/store"
                   >
                     Store
@@ -69,10 +66,9 @@ const Header = () => {
                 <li className="nav-item">
                   <AniLink
                     className="nav-link"
-                    swipe
-                    direction="left"
+                    cover
                     bg="black"
-                    duration={0.3}
+                    duration={0.5}
                     to="/collections"
                   >
                     Collections
@@ -81,10 +77,9 @@ const Header = () => {
                 <li className="nav-item">
                   <AniLink
                     className="nav-link"
-                    swipe
-                    direction="left"
+                    cover
                     bg="black"
-                    duration={0.3}
+                    duration={0.5}
                     to="/about"
                   >
                     About
@@ -93,23 +88,16 @@ const Header = () => {
                 <li className="nav-item">
                   <AniLink
                     className="nav-link"
-                    swipe
-                    direction="left"
+                    cover
                     bg="black"
-                    duration={0.3}
+                    duration={0.5}
                     to="/contact-us"
                   >
                     Contact
                   </AniLink>
                 </li>
                 <li className="nav-item">
-                  <AniLink
-                    swipe
-                    direction="left"
-                    bg="black"
-                    duration={0.3}
-                    to="/cart"
-                  >
+                  <AniLink cover bg="black" duration={0.5} to="/cart">
                     <img
                       className="shopping-cart-logo"
                       src={ShoppingCartLogo}
