@@ -1,4 +1,4 @@
-## ✨ Gatsby Contentful E-Commerce website
+## ✨ Gatsby Contentful E-Commerce Website
 
 ### 🖥 Check out at: https://citriavn-development.netlify.app
 
