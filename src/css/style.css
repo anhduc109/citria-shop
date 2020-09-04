@@ -1460,14 +1460,14 @@ code {
 
 .citria-logo {
   margin: 0;
-  width: 110px;
+  width: 220px;
 }
 
 .citria-logo-mobile {
   margin: 0;
-  width: 80px;
+  width: 150px;
   position: absolute;
-  top: 0;
+  top: 3px;
   bottom: 0;
   left: 0;
   right: 0;

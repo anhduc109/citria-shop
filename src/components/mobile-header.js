@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router"
 import { stack as Menu } from "react-burger-menu"
 
 import menuIcon from "../images/menu-icon.svg"
-import CitriaLogo from "../images/citria-logo.png"
+import CitriaGomet from "../images/citria-gomet.png"
 import ShoppingCartLogo from "../images/shopping-cart-2.svg"
 
 const MobileHeader = () => {
@@ -63,7 +63,7 @@ const MobileHeader = () => {
         >
           <img
             className="citria-logo-mobile"
-            src={CitriaLogo}
+            src={CitriaGomet}
             alt="Citria logo"
           />
         </AniLink>

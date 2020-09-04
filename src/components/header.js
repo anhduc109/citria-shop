@@ -6,7 +6,7 @@ import "../css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.css"
 
 import "../css/style.css"
-import CitriaLogo from "../images/citria-logo.png"
+import CitriaGomet from "../images/citria-gomet.png"
 import ShoppingCartLogo from "../images/shopping-cart-2.svg"
 
 const Header = () => {
@@ -24,7 +24,11 @@ const Header = () => {
               duration={0.5}
               to="/"
             >
-              <img className="citria-logo" src={CitriaLogo} alt="Citria logo" />
+              <img
+                className="citria-logo"
+                src={CitriaGomet}
+                alt="Citria logo"
+              />
             </AniLink>
           </div>
           <div className="col-sm-12 col-md-8">
