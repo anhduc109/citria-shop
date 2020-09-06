@@ -45,17 +45,6 @@ const Header = () => {
                     Home
                   </AniLink>
                 </li>
-                {/* <li className="nav-item">
-                  <AniLink
-                    className="nav-link"
-                    cover
-                    bg="black"
-                    duration={1}
-                    to="/blogs"
-                  >
-                    Blogs
-                  </AniLink>
-                </li> */}
                 <li className="nav-item">
                   <AniLink
                     className="nav-link"
@@ -84,9 +73,9 @@ const Header = () => {
                     cover
                     bg="black"
                     duration={0.5}
-                    to="/about"
+                    to="/policy"
                   >
-                    About
+                    Policy
                   </AniLink>
                 </li>
                 <li className="nav-item">
@@ -95,9 +84,9 @@ const Header = () => {
                     cover
                     bg="black"
                     duration={0.5}
-                    to="/contact-us"
+                    to="/about"
                   >
-                    Contact
+                    About
                   </AniLink>
                 </li>
                 <li className="nav-item">

@@ -39,18 +39,18 @@ const MobileHeader = () => {
           cover
           bg="black"
           duration={0.5}
-          to="/about"
+          to="/policy"
         >
-          <h4>About</h4>
+          <h4>Policy</h4>
         </AniLink>
         <AniLink
           className="menu-item"
           cover
           bg="black"
           duration={0.5}
-          to="/contact-us"
+          to="/about"
         >
-          <h4>Contact</h4>
+          <h4>About</h4>
         </AniLink>
       </Menu>
       <div className="citria-logo-mobile-wrapper">

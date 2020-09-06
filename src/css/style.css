@@ -1827,6 +1827,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-bottom: 20px;
 }
 
+/* Policy Page */
+.policy-page {
+  margin: 120px 0px 60px;
+}
+
 @media (min-width: 1800px) {
   .container {
     max-width: 1680px;
@@ -1884,6 +1889,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .collections-page {
+    margin: 80px 0 30px;
+  }
+
+  .policy-page {
     margin: 80px 0 30px;
   }
 
