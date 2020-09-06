@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router"
 import { stack as Menu } from "react-burger-menu"
 
 import menuIcon from "../images/menu-icon.svg"
-import CitriaGomet from "../images/citria-gomet.png"
+import CitriaGomet from "../images/citria-gomet-text.svg"
 import ShoppingCartLogo from "../images/shopping-cart-2.svg"
 
 const MobileHeader = () => {

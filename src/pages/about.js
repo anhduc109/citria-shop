@@ -10,8 +10,8 @@ class About extends React.Component {
         <div className="about-page">
           <div className="container">
             <h1>About us</h1>
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </div>
       </Layout>
     )
   }

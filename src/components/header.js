@@ -6,7 +6,7 @@ import "../css/font-awesome.css"
 import "bootstrap/dist/css/bootstrap.css"
 
 import "../css/style.css"
-import CitriaGomet from "../images/citria-gomet.png"
+import CitriaGomet from "../images/citria-gomet-text.svg"
 import ShoppingCartLogo from "../images/shopping-cart-2.svg"
 
 const Header = () => {
