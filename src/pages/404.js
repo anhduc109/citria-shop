@@ -4,7 +4,10 @@ import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" keywords={[`gatsby`, `404`, `react`]} />
+    <SEO
+      title="404: Not found"
+      keywords={[`Citria Gomet`, `Not found`, `ECommerce`]}
+    />
     <div className="container">
       <div className="not-found-page">
         <h3>NOT FOUND</h3>

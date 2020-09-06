@@ -20,7 +20,7 @@ const CartPage = () => {
 
   return cart.length > 0 ? (
     <Layout>
-      <SEO title="Cart" keywords={[`ecommerce`, `cart`, `react`]} />
+      <SEO title="Cart" keywords={[`Citria Gomet`, `Cart`, `ECommerce`]} />
       <div className="cart-page">
         <div className="container">
           <h3>Shopping Cart</h3>

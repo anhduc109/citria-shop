@@ -29,7 +29,10 @@ const CheckOutPage = () => {
   // return cart.length > 0 ? (
   return (
     <Layout>
-      <SEO title="Check Out" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
+      <SEO
+        title="Check Out"
+        keywords={[`Citria Gomet`, `Checkout`, `ECommerce`]}
+      />
       <div className="check-out-page">
         <div className="container">
           <div className="row">

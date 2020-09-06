@@ -7,7 +7,7 @@ import AnimateLink from "../components/AnimateLink"
 const SorryPage = () => {
   return (
     <Layout>
-      <SEO title="Sorry" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
+      <SEO title="Sorry" keywords={[`Citria Gomet`, `Sorry`, `ECommerce`]} />
       <div className="thank-you-page">
         <div className="container">
           <h3>Sorry!</h3>

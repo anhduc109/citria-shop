@@ -7,7 +7,10 @@ import AnimateLink from "../components/AnimateLink"
 const ThankYouPage = () => {
   return (
     <Layout>
-      <SEO title="Thank You" keywords={[`Citriavn`, `Citria`, `ecommerce`]} />
+      <SEO
+        title="Thank You"
+        keywords={[`Citria Gomet`, `Thank you`, `ECommerce`]}
+      />
       <div className="thank-you-page">
         <div className="container">
           <h3>THANK YOU!</h3>

@@ -14,7 +14,6 @@ class Contact extends React.Component {
           <div className="container">
             <h1>Policy</h1>
           </div>
-          {/* <img src={Logo} /> */}
         </div>
       </Layout>
     )
