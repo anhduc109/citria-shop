@@ -5,8 +5,8 @@ const { SPACE_ID, ACCESS_TOKEN, SNIP_CART } = process.env
 
 module.exports = {
   siteMetadata: {
-    title: `Citria Shop`,
-    description: `E-Commerce site with Gatsby and React`,
+    title: `Citria Gomet`,
+    description: `Clothing E-Commerce`,
     author: `Duc Pham`,
   },
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Citria`,
+        name: `Citria Gomet`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
