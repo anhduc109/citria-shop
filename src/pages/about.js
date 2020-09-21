@@ -15,17 +15,17 @@ class About extends React.Component {
     return (
       <Layout>
         <SEO title="About" keywords={[`Citria Gomet`, `About`, `ECommerce`]} />
-        <div className="about-page">
-          {/* <div className="container"> */}
-          <img src={One} />
-          <img src={Two} />
-          <img src={Three} />
-          <img src={Four} />
-          <img src={Five} />
-          <img src={Six} />
-          <img src={Seven} />
-          {/* </div> */}
-        </div>
+        {/* <div className="about-page"> */}
+        {/* <div className="container"> */}
+        <img src={One} />
+        <img src={Two} />
+        <img src={Three} />
+        <img src={Four} />
+        <img src={Five} />
+        <img src={Six} />
+        <img src={Seven} />
+        {/* </div> */}
+        {/* </div> */}
       </Layout>
     )
   }
