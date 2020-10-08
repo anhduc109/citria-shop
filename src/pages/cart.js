@@ -23,7 +23,7 @@ const CartPage = () => {
       <SEO title="Cart" keywords={[`Citria Gomet`, `Cart`, `ECommerce`]} />
       <div className="cart-page">
         <div className="container">
-          <h3>Shopping Cart</h3>
+          <h4>SHOPPING CART</h4>
           <div className="row">
             <div className="cart-items-detail col-md-7">
               <div className="container">
@@ -34,7 +34,7 @@ const CartPage = () => {
             </div>
             <div className="cart-total col-md-5">
               <div className="container">
-                <h4>Total Price</h4>
+                <h4>TOTAL PRICE</h4>
                 <h5>{totalPrice} VNĐ</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -58,10 +58,18 @@ const CartPage = () => {
     </Layout>
   ) : (
     <Layout>
-      <SEO title="Cart" keywords={[`ecommerce`, `cart`, `react`]} />
+      <SEO title="Cart" keywords={[`Citria Gomet`, `Ecommerce`, `Cart`]} />
       <div className="cart-page">
         <div className="container">
-          <h3>Your shopping cart is empty</h3>
+          <h4>YOUR SHOPPING CART IS EMPTY!</h4>
+          <div className="thank-you-content">
+            <h6>
+              You can add your favorite products to shopping cart by going to{" "}
+              <span>
+                <AnimateLink path="/store" content="Store"></AnimateLink>
+              </span>
+            </h6>
+          </div>
         </div>
       </div>
     </Layout>

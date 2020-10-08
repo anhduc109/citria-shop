@@ -233,7 +233,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
-  color: inherit;
+  color: black;
   font-weight: 800;
   text-rendering: optimizeLegibility;
   /* font-size: 2.25rem; */
@@ -248,7 +248,7 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
-  color: inherit;
+  color: black;
   font-weight: 700;
   text-rendering: optimizeLegibility;
   /* font-size: 1.62671rem; */
@@ -263,7 +263,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
-  color: inherit;
+  color: black;
   font-weight: 600;
   text-rendering: optimizeLegibility;
   /* font-size: 1.38316rem; */
@@ -278,8 +278,8 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
-  color: inherit;
-  font-weight: 500;
+  color: black;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
   /* font-size: 1rem; */
   line-height: 1.1;
@@ -293,8 +293,8 @@ h5 {
   padding-right: 0;
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
-  color: inherit;
-  font-weight: 400;
+  color: black;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
   /* font-size: 0.85028rem; */
   line-height: 1.1;
@@ -308,7 +308,7 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   /* margin-bottom: 1.45rem; */
-  color: inherit;
+  color: black;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   /* font-size: 0.78405rem; */
@@ -1558,8 +1558,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .animate-link:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
+}
+
+.animate-link:hover .details-name {
+  text-decoration: underline;
 }
 /* Styling of overlay */
 .bm-overlay {
@@ -1673,6 +1677,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .cart-quantity-select {
   width: 80px;
+  margin-bottom: 40px;
 }
 
 .cart-total {
@@ -1778,7 +1783,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .thank-you-content {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 /* Collections Page */

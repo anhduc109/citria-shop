@@ -10,7 +10,7 @@ const SorryPage = () => {
       <SEO title="Sorry" keywords={[`Citria Gomet`, `Sorry`, `ECommerce`]} />
       <div className="thank-you-page">
         <div className="container">
-          <h3>Sorry!</h3>
+          <h4>SORRY!</h4>
           <div className="thank-you-content">
             <h6>
               There was a problem in our server that we couldn't process your

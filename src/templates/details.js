@@ -73,9 +73,9 @@ const ProductDetails = data => {
               <h3 className="product-title">
                 {data.data.contentfulProduct.name}
               </h3>
-              <h4 className="product-price">
+              <h5 className="product-price">
                 {data.data.contentfulProduct.price} VNĐ
-              </h4>
+              </h5>
               <div
                 className="product-detail-text"
                 dangerouslySetInnerHTML={{

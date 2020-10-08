@@ -13,7 +13,7 @@ const ThankYouPage = () => {
       />
       <div className="thank-you-page">
         <div className="container">
-          <h3>THANK YOU!</h3>
+          <h4>THANK YOU!</h4>
           <div className="thank-you-content">
             <h6>
               We are getting started on your order right away, and you will
