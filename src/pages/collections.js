@@ -49,18 +49,22 @@ class IndexPost extends React.Component {
                 key={items.node.id}
               >
                 <div className="details_List">
-                  {items.node.image === null ? (
-                    <div className="no-image">No Image</div>
-                  ) : (
-                    <Img fluid={items.node.featureImage.fluid} />
-                  )}
+                  <AnimateLink
+                    path={`/collections/${items.node.slug}`}
+                    content={
+                      <>
+                        {items.node.image === null ? (
+                          <div className="no-image">No Image</div>
+                        ) : (
+                          <Img fluid={items.node.featureImage.fluid} />
+                        )}
 
-                  <div className="details_inner">
-                    <AnimateLink
-                      path={`/collections/${items.node.slug}`}
-                      content={<h5>{items.node.title}</h5>}
-                    />
-                  </div>
+                        <div className="details_inner">
+                          <h5 className="details-name">{items.node.title}</h5>
+                        </div>
+                      </>
+                    }
+                  />
                 </div>
               </div>
             ))}
