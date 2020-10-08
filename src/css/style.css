@@ -1676,8 +1676,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .cart-quantity-select {
-  width: 80px;
-  margin-bottom: 40px;
+  width: 90px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .cart-total {
