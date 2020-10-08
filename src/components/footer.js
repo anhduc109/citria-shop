@@ -13,7 +13,7 @@ class Footer extends Component {
               <div className="site-info">
                 <div>
                   <a
-                    href="https://www.facebook.com/citriavietnam"
+                    href="https://www.facebook.com/citriagomet"
                     target="_blank"
                   >
                     <img
@@ -22,7 +22,10 @@ class Footer extends Component {
                       alt="Facebook"
                     />
                   </a>
-                  <a href="https://www.instagram.com/citriavn/" target="_blank">
+                  <a
+                    href="https://www.instagram.com/citriagomet/"
+                    target="_blank"
+                  >
                     <img
                       className="footer-instagram"
                       src={InstagramLogo}
