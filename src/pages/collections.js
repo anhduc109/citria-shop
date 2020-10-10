@@ -56,7 +56,10 @@ class IndexPost extends React.Component {
                         {items.node.image === null ? (
                           <div className="no-image">No Image</div>
                         ) : (
-                          <Img fluid={items.node.featureImage.fluid} />
+                          <Img
+                            fluid={items.node.featureImage.fluid}
+                            imgStyle={{ objectFit: "contain" }}
+                          />
                         )}
 
                         <div className="details_inner">
@@ -99,7 +102,7 @@ export const query = graphql`
           title
           slug
           featureImage {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 1200, quality: 100) {
               base64
               aspectRatio
               src

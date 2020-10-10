@@ -13,7 +13,7 @@ const CollectionDetails = data => (
     <div className="collection-detail-page">
       <div className="container">
         <div className="collection-detail-title">
-          <h3>{data.data.contentfulCollection.title}</h3>
+          <h4>{data.data.contentfulCollection.title}</h4>
         </div>
         {/* <div
           className="collection-detail-description"
