@@ -8,7 +8,7 @@ const CollectionDetails = data => (
   <Layout>
     <SEO
       title={data.data.contentfulCollection.title}
-      keywords={[`gatsby`, `ecommerce`, `react`, `contentFul`, `Snipcart`]}
+      keywords={[`Citria Gomet`, `Ecommerce`, `Clothing`]}
     />
     <div className="collection-detail-page">
       <div className="container">
@@ -31,7 +31,7 @@ const CollectionDetails = data => (
         />
         {data.data.contentfulCollection.moreImages.map(item => (
           <Img
-            className="collection-detail-image col-12 col-sm-6 col-md-6"
+            className="collection-detail-image col-12 col-sm-12 col-md-12"
             sizes={item.fluid}
           />
         ))}
@@ -55,7 +55,7 @@ export const query = graphql`
       }
       featureImage {
         id
-        fluid {
+        fluid(quality: 100) {
           base64
           aspectRatio
           src
@@ -67,7 +67,7 @@ export const query = graphql`
       }
       moreImages {
         id
-        fluid {
+        fluid(quality: 100) {
           base64
           aspectRatio
           src
