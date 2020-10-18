@@ -62,7 +62,7 @@ class IndexPost extends React.Component {
                           <h5 className="details-name">{items.node.name}</h5>
                           <div className="row">
                             <div className="col-sm-12 align-self-center">
-                              <h6>{items.node.price} VNĐ</h6>
+                              <h6>{items.node.price.toLocaleString()} VNĐ</h6>
                             </div>
                           </div>
                         </div>

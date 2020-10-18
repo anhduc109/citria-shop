@@ -15,7 +15,9 @@ const CheckOutSummarize = ({ totalPrice }) => {
       <div className="check-out-section-wrapper">
         <div className="order-total-price-wrapper">
           <h6 className="order-total-price">TOTAL PRICE</h6>
-          <h6 className="order-total-price">{totalPrice} VNĐ</h6>
+          <h6 className="order-total-price">
+            {totalPrice.toLocaleString()} VNĐ
+          </h6>
         </div>
         <div
           className="check-out-order-btn"
@@ -42,7 +44,9 @@ const CheckOutSummarize = ({ totalPrice }) => {
               <Img className="col-md-3 col-sm-4 col-4" sizes={item.img} />
               <div className="col-md-9 col-sm-8 col-4">
                 <div className="order-details-name">{item.name}</div>
-                <div className="order-details-price">{item.price} VNĐ</div>
+                <div className="order-details-price">
+                  {item.price.toLocaleString()} VNĐ
+                </div>
                 <p>Size: {item.size}</p>
                 <p>Quantity: {item.quantity}</p>
               </div>

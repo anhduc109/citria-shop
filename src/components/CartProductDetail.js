@@ -29,7 +29,7 @@ const CartProductDetail = ({ item }) => {
           path={`/store/${item.slug}`}
           content={<h6>{item.name}</h6>}
         />
-        <p>{item.price} VNĐ</p>
+        <p>{item.price.toLocaleString()} VNĐ</p>
         <p>Size: {item.size}</p>
         <select
           aria-required="false"

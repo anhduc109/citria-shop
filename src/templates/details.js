@@ -74,7 +74,7 @@ const ProductDetails = data => {
                 {data.data.contentfulProduct.name}
               </h3>
               <h5 className="product-price">
-                {data.data.contentfulProduct.price} VNĐ
+                {data.data.contentfulProduct.price.toLocaleString()} VNĐ
               </h5>
               <div
                 className="product-detail-text"

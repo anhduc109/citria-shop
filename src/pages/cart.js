@@ -35,7 +35,7 @@ const CartPage = () => {
             <div className="cart-total col-md-5">
               <div className="container">
                 <h4>TOTAL PRICE</h4>
-                <h5>{totalPrice} VNĐ</h5>
+                <h5>{totalPrice.toLocaleString()} VNĐ</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
